@@ -1,10 +1,9 @@
 var spaceship;
 var oxygen;
 var water;
-var questions = ["What is 1+1?", "6x6", "2 + 6"];
-// var answers1 = ["2", "36", "8"];
-// var answers2 = ["1", "12", "12"];
+var questions1 = ["What is 1+1?", "6x6", "2 + 6"];
 var i = 0;
+var sceneNum = 0;
 
 
 function setup() {
@@ -18,7 +17,18 @@ function setup() {
 function draw() {
   background(0, 0, 0);
 
-  oxygen.display();
-  water.display();
-  spaceship.display();
+//   Draw each Scene
+  if (sceneNum === 0) {
+    Scene1();
+  } else if (sceneNum === 1) {
+    oxygen.display();
+    water.display();
+    spaceship.display();
+  }
+
+//   Increment sceneNum by 1 with mouseClicked
+  mouseClicked = function() {
+
+    sceneNum++;
+  }
 }
