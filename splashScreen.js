@@ -5,10 +5,11 @@ var Scene1 = function() {
   text("NAME", 250, 100);
   textSize(30);
   text("About", 250, 250);
-  text("Main Menu", 250, 300);
+  text("Main Menu", 250, 300); 
+  text("Instructions", 250, 350);
+  fill(255, 0, 0);
   textSize(40);
-  fill(255, 0, 0); 
-  text("PLAY!", 250, 350);
+  text("PLAY!", 250, 400);
   
 //   Logo
   fill(0, 55, 194);
