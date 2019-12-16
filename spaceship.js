@@ -1,6 +1,7 @@
 var Spaceship = function(x, y) {
   this.pos = createVector(100, 100);
   this.size = 75;
+  this.score = 0;
 
   this.display = function() {
     fill(223, 224, 182);
@@ -25,6 +26,14 @@ var Spaceship = function(x, y) {
       textSize(18);
       fill(0, 0, 0);
       text(questions1[i], 200, 200);
+      text(answers1[i], 200, 250);
+      text(answers2[i], 200, 300);
+      text(answers3[i], 200, 350);
+      text(answers3[i], 200, 400);   
+      fill(0, 255, 0);
+      rect(365, 390, 75, 50);
+      fill(0, 0, 0);
+      text("Check", 375, 420);
 
 
     }
@@ -36,6 +45,14 @@ var Spaceship = function(x, y) {
       textSize(18);
       fill(0, 0, 0);
       text(questions1[i], 200, 200);
+      text(answers1[i], 200, 250);
+      text(answers2[i], 200, 300);
+      text(answers3[i], 200, 350);
+      text(answers4[i], 200, 400);
+      fill(0, 255, 0);
+      rect(365, 390, 75, 50);
+      fill(0, 0, 0);
+      text("Check", 375, 420);
 
     }
 
