@@ -2,6 +2,14 @@ var spaceship;
 var oxygen;
 var water;
 var questions1 = ["What is 1+1?", "6x6", "2 + 6"];
+var answers1 = ["2", "12", "12"];
+var answers2 = ["1", "36", "4"];
+var answers3 = ["10", "0", "10"];
+var answers4 = ["100", "66", "62"];
+
+var checkAnswerX = [200, 200];
+var checkAnswerY = [250, 300];
+
 var i = 0;
 var sceneNum = 0;
 
@@ -36,6 +44,10 @@ function draw() {
     spaceship.display();
   }
 
+  textSize(20);
+  fill(255, 255, 255);
+text("Score: " + spaceship.score, 10, 30);
+  
 }
 
 
@@ -56,6 +68,7 @@ mouseClicked = function() {
     sceneNum = 3;
   }
   
+//       Play
   if (mouseX <= 400 && mouseX >=250 && mouseY <=400 && mouseY >=350) {
   sceneNum = 4;
   }
@@ -63,6 +76,15 @@ mouseClicked = function() {
   //       Use "Back Button" to return to splsah screen
   if (mouseX <= 110 && mouseX >= 10 && mouseY <= 60 && mouseY >= 10) {
     sceneNum = 0;
+  }
+//        Check if correct answer is selected and increase score
+if (mouseX <=checkAnswerX[i] + 10 && mouseX >=checkAnswerX[i] - 10 && mouseY <=checkAnswerY[i] + 10 && mouseY >= checkAnswerY[i] -10) {
+  spaceship.score ++;
+}
+
+//         Check work for questions
+  if (mouseX <= 440 && mouseX >=365 && mouseY <= 440 && mouseY >= 390 && sceneNum === 4) {
+    i++;
   }
 
 }
