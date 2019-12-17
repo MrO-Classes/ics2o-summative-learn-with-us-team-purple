@@ -35,7 +35,6 @@ var Spaceship = function(x, y) {
       fill(0, 0, 0);
       text("Check", 375, 420);
 
-
     }
 
     //     Check if spaceship is touching water
