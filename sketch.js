@@ -8,16 +8,17 @@ var SPACESHIP;
 var OXYGEN;
 var WATER;
 var Level2Scores = [];
+var ASTEROID;
 
 //   Questions and answers for each level
 var questions1 = ["What is 1+1?", "6x6", "2 + 6"];
 var answers1 = ["2", "12", "12"];
 var answers2 = ["1", "36", "4"];
-var answers3 = ["10", "0", "10"];
+var answers3 = ["10", "0", "8"];
 var answers4 = ["100", "66", "62"];
 
-var checkAnswerX = [200, 200];
-var checkAnswerY = [250, 300];
+var checkAnswerX = [200, 200, 200];
+var checkAnswerY = [250, 300, 350];
 
 //    var i=0; is used to display different questions
 var i = 0;
@@ -36,6 +37,7 @@ function setup() {
   SPACESHIP = new Spaceship();
   OXYGEN = new Oxygen();
   WATER = new Water();
+  ASTEROID = new Asteroid();
 }
 
 function draw() {
@@ -60,11 +62,10 @@ function draw() {
 //     Display Level 1
   } else if (sceneNum === 6) {
     Level2();
+  } else if (sceneNum === 7) {
+    WinState();
   }
 
-  textSize(20);
-  fill(255, 255, 255);
-  text("Score: " + spaceship.score, 10, 550);
 
 }
 
@@ -87,17 +88,17 @@ mouseClicked = function() {
   }
 
   //       Play
-  if (mouseX <= 400 && mouseX >= 250 && mouseY <= 400 && mouseY >= 350) {
+  if (mouseX <= 400 && mouseX >= 250 && mouseY <= 400 && mouseY >= 350 && sceneNum === 0) {
     sceneNum = 4;
   }
 
   //       Use "Back Button" to return to splsah screen
-  if (mouseX <= 110 && mouseX >= 10 && mouseY <= 60 && mouseY >= 10) {
+  if (mouseX <= 110 && mouseX >= 10 && mouseY <= 60 && mouseY >= 10 && sceneNum <= 7) {
     sceneNum = 0;
   }
 
   if (mouseX <= checkAnswerX[i] + 10 && mouseX >= checkAnswerX[i] - 10 && mouseY <= checkAnswerY[i] + 10 && mouseY >= checkAnswerY[i] - 10) {
-    spaceship.score++;
+    SPACESHIP.score ++;
   }
 
   //         Check work for questions
@@ -112,5 +113,12 @@ mouseClicked = function() {
  if (mouseX <=360 && mouseX >=240 && mouseY <=320 && mouseY >= 200 && sceneNum === 4) {
    sceneNum = 6;
  }
+  
+//   End of Level 2 (Move to Level 3 or return to splash)
+  if (mouseX <=285 && mouseX >=200 && mouseY <=510 && mouseY >=450 && sceneNum === 7) {
+  sceneNum = 0;
+  } else if (mouseX <=400 && mouseX >=315 && mouseY <=510 && mouseY >=450 && sceneNum === 7) {
+  sceneNum = 8;
+  } 
 
 }
