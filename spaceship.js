@@ -29,7 +29,7 @@ var Spaceship = function(x, y) {
       text(answers1[i], 200, 250);
       text(answers2[i], 200, 300);
       text(answers3[i], 200, 350);
-      text(answers3[i], 200, 400);   
+      text(answers4[i], 200, 400);   
       fill(0, 255, 0);
       rect(365, 390, 75, 50);
       fill(0, 0, 0);
