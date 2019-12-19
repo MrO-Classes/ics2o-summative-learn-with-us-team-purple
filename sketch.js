@@ -9,6 +9,9 @@ var OXYGEN;
 var WATER;
 var Level2Scores = [];
 var ASTEROID;
+var ASTEROID2;
+var ASTEROID3;
+
 
 //   Questions and answers for each level
 var questions1 = ["What is 1+1?", "6x6", "2 + 6"];
@@ -28,16 +31,19 @@ var sceneNum = 0;
 function setup() {
   createCanvas(600, 600);
 
-//   Used in level 1
+  //   Used in level 1
   spaceship = new Spaceship();
   oxygen = new Oxygen();
   water = new Water();
-  
-//   Used in level 2
+
+  //   Used in level 2
   SPACESHIP = new Spaceship();
   OXYGEN = new Oxygen();
   WATER = new Water();
   ASTEROID = new Asteroid();
+  ASTEROID2 = new Asteroid2();
+  ASTEROID3 = new Asteroid3();
+
 }
 
 function draw() {
@@ -59,11 +65,15 @@ function draw() {
     BackButton();
     LevelSelection();
   } else if (sceneNum === 5) {
-//     Display Level 1
+    //     Display Level 1
   } else if (sceneNum === 6) {
     Level2();
   } else if (sceneNum === 7) {
     WinState();
+  } else if (sceneNum === 8) {
+    LoseState();
+  } else if (sceneNum === 9) {
+//     Display Level 3
   }
 
 
@@ -98,27 +108,36 @@ mouseClicked = function() {
   }
 
   if (mouseX <= checkAnswerX[i] + 10 && mouseX >= checkAnswerX[i] - 10 && mouseY <= checkAnswerY[i] + 10 && mouseY >= checkAnswerY[i] - 10) {
-    SPACESHIP.score ++;
+    SPACESHIP.score++;
   }
 
   //         Check work for questions
-  if (mouseX <= 440 && mouseX >= 365 && mouseY <= 440 && mouseY >= 390 && sceneNum >=5) {
+  if (mouseX <= 440 && mouseX >= 365 && mouseY <= 440 && mouseY >= 390 && sceneNum >= 5) {
     i++;
   }
-  
-//   Display Level 1
-  
 
-//   Display Level 2
- if (mouseX <=360 && mouseX >=240 && mouseY <=320 && mouseY >= 200 && sceneNum === 4) {
-   sceneNum = 6;
- }
+  //   Display Level 1
+
+
+  //   Display Level 2
+  if (mouseX <= 360 && mouseX >= 240 && mouseY <= 320 && mouseY >= 200 && sceneNum === 4) {
+    sceneNum = 6;
+  }
+
+  //   End of Level 2 (Move to Level 3 or return to splash)
+  if (mouseX <= 285 && mouseX >= 200 && mouseY <= 510 && mouseY >= 450 && sceneNum === 7) {
+    sceneNum = 0;
+  } else if (mouseX <= 400 && mouseX >= 315 && mouseY <= 510 && mouseY >= 450 && sceneNum === 7) {
+    sceneNum = 9;
+  }
   
-//   End of Level 2 (Move to Level 3 or return to splash)
-  if (mouseX <=285 && mouseX >=200 && mouseY <=510 && mouseY >=450 && sceneNum === 7) {
-  sceneNum = 0;
-  } else if (mouseX <=400 && mouseX >=315 && mouseY <=510 && mouseY >=450 && sceneNum === 7) {
-  sceneNum = 8;
-  } 
+//   Lost Level 2 (Retry or return to splash) 
+  if (mouseX <= 285 && mouseX >= 200 && mouseY <= 510 && mouseY >= 450 && sceneNum === 8) {
+    sceneNum = 0;
+    SPACESHIP.pos = createVector(100, 100);
+  } else if (mouseX <= 400 && mouseX >= 315 && mouseY <= 510 && mouseY >= 450 && sceneNum === 8) {
+    sceneNum = 6;
+    SPACESHIP.pos = createVector(100, 100);
+  }
 
 }
