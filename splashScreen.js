@@ -1,9 +1,14 @@
 var Scene1 = function() {
   background(0, 0, 0);
-  fill(255, 255, 255);
+  fill(250, 241, 65);
   textSize(50);
-  text("NAME", 250, 100);
+  text("STARS", 235, 100);
   textSize(30);
+  text("at", 295, 125);
+  textSize(50);
+  text("NIGHT", 235, 175);
+  textSize(30);
+  fill(255, 255, 255);
   text("About", 250, 250);
   text("Main Menu", 250, 300); 
   text("Instructions", 250, 350);
