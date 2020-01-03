@@ -8,17 +8,19 @@ var SPACESHIP;
 var OXYGEN;
 var WATER;
 var Level2Scores = [];
-var ASTEROID;
+var ASTEROID1;
 var ASTEROID2;
 var ASTEROID3;
+var ASTEROID4;
+var ASTEROID5;
 
 
 //   Questions and answers for each level
-var questions1 = ["What is 1+1?", "6x6", "2 + 6"];
-var answers1 = ["2", "12", "12"];
-var answers2 = ["1", "36", "4"];
-var answers3 = ["10", "0", "8"];
-var answers4 = ["100", "66", "62"];
+var questions1 = ["What is 1+1?", "6x6", "2 + 6", "A bag of gummy bears costs $5.25. You pay $10.00. How much CHANGE will you be given?"];
+var answers1 = ["2", "12", "12", "0"];
+var answers2 = ["1", "36", "4", "0"];
+var answers3 = ["10", "0", "8", "0"];
+var answers4 = ["100", "66", "62", "0"];
 
 var checkAnswerX = [200, 200, 200];
 var checkAnswerY = [250, 300, 350];
@@ -40,9 +42,11 @@ function setup() {
   SPACESHIP = new Spaceship();
   OXYGEN = new Oxygen();
   WATER = new Water();
-  ASTEROID = new Asteroid();
-  ASTEROID2 = new Asteroid2();
-  ASTEROID3 = new Asteroid3();
+  ASTEROID1 = new Asteroid(200, 390);
+  ASTEROID2 = new Asteroid(500, 100);
+  ASTEROID3 = new Asteroid(300, 500);
+  ASTEROID4 = new Asteroid(400, 300);
+  ASTEROID5 = new Asteroid(100, 300);
 
 }
 
@@ -74,14 +78,14 @@ function draw() {
     LoseState();
   } else if (sceneNum === 9) {
 //     Display Level 3
-  }
+  } 
 
 
 }
 
 
 
-//   Increment sceneNum by 1 with mouseClicked
+//   Increment sceneNum with each mouse click
 mouseClicked = function() {
   //     About Screen
   if (mouseX <= 350 && mouseX >= 240 && mouseY <= 250 && mouseY >= 200 && sceneNum === 0) {
@@ -107,8 +111,9 @@ mouseClicked = function() {
     sceneNum = 0;
   }
 
+//   Increase score each after answering question correctly
   if (mouseX <= checkAnswerX[i] + 10 && mouseX >= checkAnswerX[i] - 10 && mouseY <= checkAnswerY[i] + 10 && mouseY >= checkAnswerY[i] - 10) {
-    SPACESHIP.score++;
+    SPACESHIP.score +=10;
   }
 
   //         Check work for questions
@@ -134,10 +139,24 @@ mouseClicked = function() {
 //   Lost Level 2 (Retry or return to splash) 
   if (mouseX <= 285 && mouseX >= 200 && mouseY <= 510 && mouseY >= 450 && sceneNum === 8) {
     sceneNum = 0;
+//     Reset to original position
     SPACESHIP.pos = createVector(100, 100);
+    ASTEROID1.pos = createVector(200, 390);   
+    ASTEROID2.pos = createVector(500, 100);
+    ASTEROID3.pos = createVector(300, 500);
+    ASTEROID4.pos = createVector(400, 300);
+    ASTEROID5.pos = createVector(100, 300);
+    
   } else if (mouseX <= 400 && mouseX >= 315 && mouseY <= 510 && mouseY >= 450 && sceneNum === 8) {
     sceneNum = 6;
+//     Reset to original position
     SPACESHIP.pos = createVector(100, 100);
+    ASTEROID1.pos = createVector(200, 390);   
+    ASTEROID2.pos = createVector(500, 100);
+    ASTEROID3.pos = createVector(300, 500);
+    ASTEROID4.pos = createVector(400, 300);
+    ASTEROID5.pos = createVector(100, 300);
+    
   }
 
 }
