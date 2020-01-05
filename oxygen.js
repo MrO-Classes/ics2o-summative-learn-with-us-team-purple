@@ -1,5 +1,5 @@
 var Oxygen = function(x, y) {
-  this.pos = createVector(300, 400);
+  this.pos = createVector(x, y);
   this.size = 45;
 
   this.display = function() {
