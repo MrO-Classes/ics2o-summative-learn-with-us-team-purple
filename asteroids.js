@@ -26,4 +26,3 @@ var Asteroid = function(x, y) {
 
   }
 }
-
