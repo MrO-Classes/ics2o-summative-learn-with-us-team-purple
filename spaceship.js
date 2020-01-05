@@ -1,16 +1,15 @@
 var Spaceship = function(x, y) {
-  var speed = 2;
-  var z = 0;
   
-  this.pos = createVector(100, 100);
+  this.pos = createVector(x, y);
   this.size = 75;
   this.score = 0;
-
+  
+  var X = 4;
+  var spaceX;
+  
   this.display = function() {
     fill(223, 224, 182);
     ellipse(this.pos.x, this.pos.y, this.size, this.size);
-
-    z = z + speed;
 
     //     Move spaceship
     if (keyIsPressed && keyCode === 38) {
@@ -23,9 +22,18 @@ var Spaceship = function(x, y) {
       this.pos.x -= 2;
     }
     
-    if (keyIsPressed && keyCode === 32) {
-    ellipse(z, this.pos.y, 10, 10);
-    }
+    spaceX = this.pos.x + X;
+    
+    X++;
+    
+    
+    spaceX = this.pos.x + X;
+    
+    X++;
+    
+    // if (keyIsPressed && keyCode === 32) {
+    // ellipse(spaceX, this.pos.y, 10, 10);
+    // }
 
 
     //     Constrain spaceship inside the canvas
@@ -43,3 +51,9 @@ var Spaceship = function(x, y) {
 
 
 }
+
+
+
+
+
+
