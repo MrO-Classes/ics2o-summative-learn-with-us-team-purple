@@ -67,33 +67,3 @@ var Level1 = function() {
 
 }
 
-// Correct oxygen question answer
-var correctansweroxygen = function() {
-  spaceship.score += 10;
-  o = 4;
-
-}
-
-// Wrong oxygen question answer
-var wrongansweroxygen = function() {
-  o++;
-
-  if (o === 4) {
-    o = 0;
-  }
-}
-
-// Correct water question answer
-var correctanswerwater = function() {
-  spaceship.score += 10;
-  w = 4;
-}
-
-// Wrong water question answer
-var wronganswerwater = function() {
-  w++;
-
-  if (w === 4) {
-    w = 0;
-  }
-}
