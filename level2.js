@@ -7,11 +7,11 @@ var Level2 = function() {
 } else if (!(SPACESHIP.pos.x <= OXYGEN.pos.x + 22.5 && SPACESHIP.pos.x >= OXYGEN.pos.x - 22.5 && SPACESHIP.pos.y <= OXYGEN.pos.y + 22.5 && SPACESHIP.pos.y >= OXYGEN.pos.y - 22.5) && !(SPACESHIP.pos.x <= WATER.pos.x + 15 && SPACESHIP.pos.x >= WATER.pos.x - 15 && SPACESHIP.pos.y <= WATER.pos.y + 15 && SPACESHIP.pos.y >= WATER.pos.y - 15) && ASTEROID2.pos.x <= SPACESHIP.pos.x + 20 && ASTEROID2.pos.x >= SPACESHIP.pos.x - 20 && ASTEROID2.pos.y <= SPACESHIP.pos.y + 20 && ASTEROID2.pos.y >= SPACESHIP.pos.y - 20) {
   sceneNum = 8;
 } else if (!(SPACESHIP.pos.x <= OXYGEN.pos.x + 22.5 && SPACESHIP.pos.x >= OXYGEN.pos.x - 22.5 && SPACESHIP.pos.y <= OXYGEN.pos.y + 22.5 && SPACESHIP.pos.y >= OXYGEN.pos.y - 22.5) && !(SPACESHIP.pos.x <= WATER.pos.x + 15 && SPACESHIP.pos.x >= WATER.pos.x - 15 && SPACESHIP.pos.y <= WATER.pos.y + 15 && SPACESHIP.pos.y >= WATER.pos.y - 15) &&  ASTEROID3.pos.x <= SPACESHIP.pos.x + 20 && ASTEROID3.pos.x >= SPACESHIP.pos.x - 20 && ASTEROID3.pos.y <= SPACESHIP.pos.y + 20 && ASTEROID3.pos.y >= SPACESHIP.pos.y - 20) {
-  sceneNum = 8;
+  sceneNum = 11;
 } else if (!(SPACESHIP.pos.x <= OXYGEN.pos.x + 22.5 && SPACESHIP.pos.x >= OXYGEN.pos.x - 22.5 && SPACESHIP.pos.y <= OXYGEN.pos.y + 22.5 && SPACESHIP.pos.y >= OXYGEN.pos.y - 22.5) && !(SPACESHIP.pos.x <= WATER.pos.x + 15 && SPACESHIP.pos.x >= WATER.pos.x - 15 && SPACESHIP.pos.y <= WATER.pos.y + 15 && SPACESHIP.pos.y >= WATER.pos.y - 15) &&  ASTEROID4.pos.x <= SPACESHIP.pos.x + 20 && ASTEROID4.pos.x >= SPACESHIP.pos.x - 20 && ASTEROID4.pos.y <= SPACESHIP.pos.y + 20 && ASTEROID4.pos.y >= SPACESHIP.pos.y - 20) {
-  sceneNum = 8;
+  sceneNum = 11;
 } else if (!(SPACESHIP.pos.x <= OXYGEN.pos.x + 22.5 && SPACESHIP.pos.x >= OXYGEN.pos.x - 22.5 && SPACESHIP.pos.y <= OXYGEN.pos.y + 22.5 && SPACESHIP.pos.y >= OXYGEN.pos.y - 22.5) && !(SPACESHIP.pos.x <= WATER.pos.x + 15 && SPACESHIP.pos.x >= WATER.pos.x - 15 && SPACESHIP.pos.y <= WATER.pos.y + 15 && SPACESHIP.pos.y >= WATER.pos.y - 15) &&  ASTEROID5.pos.x <= SPACESHIP.pos.x + 20 && ASTEROID5.pos.x >= SPACESHIP.pos.x - 20 && ASTEROID5.pos.y <= SPACESHIP.pos.y + 20 && ASTEROID5.pos.y >= SPACESHIP.pos.y - 20) {
-  sceneNum = 8;
+  sceneNum = 11;
 }
   
   
@@ -49,17 +49,13 @@ var Level2 = function() {
     rect(50, 100, 500, 400);
     textSize(18);
     fill(0, 0, 0);
-    text(questionsO1[i], 70, 150);
-    text(questionsO2[i], 70, 180); 
-    text(answersO1[i], 70, 250);
-    text(answersO2[i], 70, 300);
-    text(answersO3[i], 70, 350);
-    text(answersO4[i], 70, 400);
+    text(QUESTIONSO1[O], 70, 150);
+    text(QUESTIONSO2[O], 70, 180); 
+    text(ANSWERSO1[O], 70, 250);
+    text(ANSWERSO2[O], 70, 300);
+    text(ANSWERSO3[O], 70, 350);
+    text(ANSWERSO4[O], 70, 400);
     fill(0, 255, 0);
-    // rect(365, 390, 75, 50);
-    // fill(0, 0, 0);
-    // text("Check", 375, 420);
-
   }
   
       //     Check if SPACESHIP is touching water
@@ -68,16 +64,13 @@ var Level2 = function() {
       rect(50, 100, 500, 400);
       textSize(18);
       fill(0, 0, 0);
-      text(questionsW1[w], 70, 150);
-      text(questionsW2[w], 70, 180);
-      text(answersW1[w], 70, 250);
-      text(answersW2[w], 70, 300);
-      text(answersW3[w], 70, 350);
-      text(answersW4[w], 70, 400);
+      text(QUESTIONSW1[W], 70, 150);
+      text(QUESTIONSW2[W], 70, 180);
+      text(ANSWERSW1[W], 70, 250);
+      text(ANSWERSW2[W], 70, 300);
+      text(ANSWERSW3[W], 70, 350);
+      text(ANSWERSW4[W], 70, 400);
       fill(0, 255, 0);
-      // rect(365, 390, 75, 50);
-      // fill(0, 0, 0);
-      // text("Check", 375, 420);
 
     }
 
@@ -91,79 +84,34 @@ var Level2 = function() {
 }
 
 
-// Display if Level Completed
-var WinState = function() {
-  background(0, 0, 0);
-  fill(255, 255, 255);
-  textSize(30);
-  text("Level Complete!", 200, 200);
-  SPACESHIP.score += 50;
-  i = 0;
-  Level2Scores.push(SPACESHIP.score);
-  textSize(20);
-  text("Score: " + Level2Scores[i], 200, 400);
-  fill(255, 0, 0);
-  rect(200, 450, 85, 60);
-  fill(0, 0, 0);
-  text("Home", 215, 485);
-  fill(255, 0, 0);
-  rect(315, 450, 85, 60);
-  fill(0, 0, 0);
-  text("Next", 330, 475);
-  text("Level", 330, 495);
-  SPACESHIP.pos = createVector(100, 100);
-
-}
-
-// Display if Level Lost (Hit by Asteroid)
-var LoseState = function() {
-  background(0, 0, 0);
-  fill(255, 255, 255);
-  textSize(30);
-  text("Level Failed!", 200, 200);
-  SPACESHIP.score = 0;
-  i = 0;
-  textSize(20);
-  text("Score: 0", 200, 400);
-  fill(255, 0, 0);
-  rect(200, 450, 85, 60);
-  fill(0, 0, 0);
-  text("Home", 215, 485);
-  fill(255, 0, 0);
-  rect(315, 450, 85, 60);
-  fill(0, 0, 0);
-  text("Retry", 330, 475);
-  text("Level", 330, 495);
-
-}
 
 // Correct Oxygen question answer
 var CorrectAnswerOxygen = function() {
   SPACESHIP.score +=10;
-  i = 5;
+  O = 5;
   
 }
 
 // Wrong Oxygen question answer
 var WrongAnswerOxygen = function() {
-  i ++;
+  O ++;
   
-  if (i === 5) {
-    i = 0;
+  if (O === 5) {
+    O = 0;
   }
 }
 
 // Correct Water question answer
 var CorrectAnswerWater = function() {
   SPACESHIP.score +=10;
-  w = 4;
+  W = 4;
 }
 
 // Wrong Water question answer
 var WrongAnswerWater = function() {
-  w ++;
+  W ++;
   
-  if (w === 4) {
-    w = 0;
+  if (W === 4) {
+    W = 0;
   }
 }
