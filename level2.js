@@ -15,11 +15,6 @@ var Level2 = function() {
 }
   
   
-  
-  if (SHOOTER.pos.x <= ASTEROID1.pos.x + 20 && SHOOTER.pos.x >= ASTEROID1.pos.x - 20 && SHOOTER.pos.y <= ASTEROID1.pos.y + 20 && SHOOTER.pos.x >= ASTEROID1.pos.y - 20) {
-    rect(10, 10, 10, 10);
-  }
-  
  
 
 //   Display in bottom, left corner of game
@@ -40,7 +35,6 @@ var Level2 = function() {
   OXYGEN.display();
   WATER.display();
   SPACESHIP.display();
-  SHOOTER.display();
   
   
   //   Check if SPACESHIP is touching OXYGEN
@@ -81,37 +75,4 @@ var Level2 = function() {
   }
 
 
-}
-
-
-
-// Correct Oxygen question answer
-var CorrectAnswerOxygen = function() {
-  SPACESHIP.score +=10;
-  O = 5;
-  
-}
-
-// Wrong Oxygen question answer
-var WrongAnswerOxygen = function() {
-  O ++;
-  
-  if (O === 5) {
-    O = 0;
-  }
-}
-
-// Correct Water question answer
-var CorrectAnswerWater = function() {
-  SPACESHIP.score +=10;
-  W = 4;
-}
-
-// Wrong Water question answer
-var WrongAnswerWater = function() {
-  W ++;
-  
-  if (W === 4) {
-    W = 0;
-  }
 }
