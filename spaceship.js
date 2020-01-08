@@ -4,10 +4,6 @@ var Spaceship = function(x, y) {
   this.size = 75;
   this.score = 0;
 
-
-  var X = 4;
-  var spaceX;
-
   this.display = function() {
     fill(223, 224, 182);
     ellipse(this.pos.x, this.pos.y, this.size, this.size);
@@ -22,19 +18,6 @@ var Spaceship = function(x, y) {
     } else if (keyIsPressed && keyCode === 37) {
       this.pos.x -= 2;
     }
-
-    spaceX = this.pos.x + X;
-
-    X++;
-
-
-    spaceX = this.pos.x + X;
-
-    X++;
-
-    // if (keyIsPressed && keyCode === 32) {
-    // ellipse(spaceX, this.pos.y, 10, 10);
-    // }
 
 
     //     Constrain spaceship inside the canvas
@@ -90,7 +73,7 @@ var Spaceship = function(x, y) {
     w = 0;
     i = 0;
     
-    if (sceneNum === 8) {
+    if (sceneNum === 7) {
         textSize(20);
         text("Score: " + Level2Scores[I], 200, 400);
         Level2Scores.push(this.score);
