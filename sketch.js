@@ -25,9 +25,6 @@ var ASTEROID4;
 var ASTEROID5;
 var I;
 
-var SHOOTER;
-var shooterX;
-
 // Level 3 elements
 var spaceship3;
 var oxygen3;
@@ -150,13 +147,6 @@ function setup() {
 }
 
 function draw() {
-  var shooterX = SPACESHIP.pos.x;
-  var shooterY = SPACESHIP.pos.y;
-    SHOOTER = new Shooter(shooterX, shooterY);
-  
-  if (keyCode === 32) {
-  shooterX ++;
-  }
   
   background(0, 0, 0);
 
@@ -230,41 +220,36 @@ mouseClicked = function() {
   
 //   Show that oxygen questions were answered correctly (level 1)
   if (mouseX <= checkanswerOX[o] + 50 && mouseX >= checkanswerOX[o] - 10 && mouseY <= checkanswerOY[o] + 10 && mouseY >= checkanswerOY[o] - 10 && spaceship.pos.x <= oxygen.pos.x + 22.5 && spaceship.pos.x >= oxygen.pos.x - 22.5 && spaceship.pos.y <= oxygen.pos.y + 22.5 && spaceship.pos.y >= oxygen.pos.y - 22.5) {
-    correctansweroxygen();
+    oxygen.CorrectAnswer();
   } else if (! (mouseX <= checkanswerOX[o] + 50 && mouseX >= checkanswerOX[o] - 10 && mouseY <= checkanswerOY[o] + 10 && mouseY >= checkanswerOY[o] - 10) && spaceship.pos.x <= oxygen.pos.x + 22.5 && spaceship.pos.x >= oxygen.pos.x - 22.5 && spaceship.pos.y <= oxygen.pos.y + 22.5 && spaceship.pos.y >= oxygen.pos.y - 22.5) {
-    wrongansweroxygen();
+    oxygen.WrongAnswer();
   }
 
 //   water questions (level 1)
   if (mouseX <= checkanswerWX[w] + 50 && mouseX >= checkanswerWX[w] - 10 && mouseY <= checkanswerWY[w] + 10 && mouseY >= checkanswerWY[w] - 10 && spaceship.pos.x <= water.pos.x + 15 && spaceship.pos.x >= water.pos.x - 15 && spaceship.pos.y <= water.pos.y + 15 && spaceship.pos.y >= water.pos.y - 15) {
-    correctanswerwater();
+    water.CorrectAnswer();
   } else if (! (mouseX <= checkanswerWX[w] + 50 && mouseX >= checkanswerWX[w] - 10 && mouseY <= checkanswerWY[w] + 10 && mouseY >= checkanswerWY[w] - 10) && spaceship.pos.x <= water.pos.x + 15 && spaceship.pos.x >= water.pos.x - 15 && spaceship.pos.y <= water.pos.y + 15 && spaceship.pos.y >= water.pos.y - 15) {
-    wronganswerwater();
+    water.WrongAnswer();
   }
   
   
 //   Show that question was answered correctly (level 2)
   if (mouseX <= CHECKANSWEROX[O] + 50 && mouseX >= CHECKANSWEROX[O] - 10 && mouseY <= CHECKANSWEROY[O] + 10 && mouseY >= CHECKANSWEROY[O] - 10 && SPACESHIP.pos.x <= OXYGEN.pos.x + 22.5 && SPACESHIP.pos.x >= OXYGEN.pos.x - 22.5 && SPACESHIP.pos.y <= OXYGEN.pos.y + 22.5 && SPACESHIP.pos.y >= OXYGEN.pos.y - 22.5) {
 //     Display message saying that the question was correctly answered (Oxygen)
-    CorrectAnswerOxygen();
+    OXYGEN.CorrectAnswer();
   } else if (! (mouseX <= CHECKANSWEROX[O] + 50 && mouseX >= CHECKANSWEROX[O] - 10 && mouseY <= CHECKANSWEROY[O] + 10 && mouseY >= CHECKANSWEROY[O] - 10) && SPACESHIP.pos.x <= OXYGEN.pos.x + 22.5 && SPACESHIP.pos.x >= OXYGEN.pos.x - 22.5 && SPACESHIP.pos.y <= OXYGEN.pos.y + 22.5 && SPACESHIP.pos.y >= OXYGEN.pos.y - 22.5) {
 //     Display different question if answered incorrectly
-    WrongAnswerOxygen();
+    OXYGEN.WrongAnswer();
   }
   
 //   Water questions (level 2)
   if (mouseX <= CHECKANSWERWX[W] + 50 && mouseX >= CHECKANSWERWX[W] - 10 && mouseY <= CHECKANSWERWY[W] + 10 && mouseY >= CHECKANSWERWY[W] - 10 && SPACESHIP.pos.x <= WATER.pos.x + 15 && SPACESHIP.pos.x >= WATER.pos.x - 15 && SPACESHIP.pos.y <= WATER.pos.y + 15 && SPACESHIP.pos.y >= WATER.pos.y - 15) {
-    CorrectAnswerWater();
+    WATER.CorrectAnswer();
   } else if (! (mouseX <= CHECKANSWERWX[W] + 50 && mouseX >= CHECKANSWERWX[W] - 10 && mouseY <= CHECKANSWERWY[W] + 10 && mouseY >= CHECKANSWERWY[W] - 10) && SPACESHIP.pos.x <= WATER.pos.x + 15 && SPACESHIP.pos.x >= WATER.pos.x - 15 && SPACESHIP.pos.y <= WATER.pos.y + 15 && SPACESHIP.pos.y >= WATER.pos.y - 15) {
-    WrongAnswerWater();
+    WATER.WrongAnswer();
   }
 
-  //         Check work for questions
-  // if (mouseX <= 440 && mouseX >= 365 && mouseY <= 440 && mouseY >= 390 && sceneNum >= 5) {
-  //   i++;
-  // }
 
-//    rect(60, 200, 120, 120);
   //   Display Level 1
   if (mouseX <= 180 && mouseX >= 60 && mouseY <= 320 && mouseY >= 200 && sceneNum === 4) {
     sceneNum = 5;
