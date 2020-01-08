@@ -1,12 +1,13 @@
 var Spaceship = function(x, y) {
-  
+
   this.pos = createVector(x, y);
   this.size = 75;
   this.score = 0;
-  
+
+
   var X = 4;
   var spaceX;
-  
+
   this.display = function() {
     fill(223, 224, 182);
     ellipse(this.pos.x, this.pos.y, this.size, this.size);
@@ -21,16 +22,16 @@ var Spaceship = function(x, y) {
     } else if (keyIsPressed && keyCode === 37) {
       this.pos.x -= 2;
     }
-    
+
     spaceX = this.pos.x + X;
-    
+
     X++;
-    
-    
+
+
     spaceX = this.pos.x + X;
-    
+
     X++;
-    
+
     // if (keyIsPressed && keyCode === 32) {
     // ellipse(spaceX, this.pos.y, 10, 10);
     // }
@@ -49,11 +50,68 @@ var Spaceship = function(x, y) {
 
   }
 
+  this.lose = function() {
+    //     Display if hit by asteroid
+    background(0, 0, 0);
+    fill(255, 255, 255);
+    textSize(30);
+    text("Level Failed!", 200, 200);
+    this.score = 0;
+    O = 0;
+    o = 0;
+    W = 0;
+    w = 0;
+
+    textSize(20);
+    text("Score: 0", 200, 400);
+    fill(255, 0, 0);
+    rect(200, 450, 85, 60);
+    fill(0, 0, 0);
+    text("Home", 215, 485);
+    fill(255, 0, 0);
+    rect(315, 450, 85, 60);
+    fill(0, 0, 0);
+    text("Retry", 330, 475);
+    text("Level", 330, 495);
+
+  }
+
+  this.win = function() {
+//     Display if you win the level
+    background(0, 0, 0);
+    fill(255, 255, 255);
+    textSize(30);
+    text("Level Complete!", 200, 200);
+    this.score += 50;
+    O = 0;
+    W = 0;
+    I = 0;
+    o = 0;
+    w = 0;
+    i = 0;
+    
+    if (sceneNum === 8) {
+        textSize(20);
+        text("Score: " + Level2Scores[I], 200, 400);
+        Level2Scores.push(this.score);
+    } else if (sceneNum === 10) {
+        textSize(20);
+        text("Score: " + level1scores[i], 200, 400);
+        level1scores.push(this.score);
+    }
+    textSize(20);
+    fill(255, 0, 0);
+    rect(200, 450, 85, 60);
+    fill(0, 0, 0);
+    text("Home", 215, 485);
+    fill(255, 0, 0);
+    rect(315, 450, 85, 60);
+    fill(0, 0, 0);
+    text("Next", 330, 475);
+    text("Level", 330, 495);
+    this.pos = createVector(100, 100);
+
+  }
+
 
 }
-
-
-
-
-
-
