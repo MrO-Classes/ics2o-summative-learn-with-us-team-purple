@@ -1,4 +1,6 @@
 var Scene1 = function() {
+  
+  
   background(0, 0, 0);
   fill(250, 241, 65);
   textSize(50);
@@ -18,7 +20,9 @@ var Scene1 = function() {
   
 //   Logo
   fill(0, 55, 194);
-  ellipse(500, 500, 100, 100);
+  image(img, 390, 500, 200, 50);
+
+  
 
 
 }
