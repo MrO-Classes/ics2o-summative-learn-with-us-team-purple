@@ -90,7 +90,7 @@ var WRONGANSWERWY3 = [400, 400, 400, 400];
 // var W=0; is used to display Water questions (level 2)
 var W = 0;
 
-var sceneNum = 0;
+var sceneNum = -1;
 
 
 // Questions and answers for level 1 (oxygen)
@@ -191,6 +191,10 @@ function draw() {
   background(0, 0, 0);
 
   //   Draw each Scene
+  
+  if (sceneNum === -1) {
+    SplashScreen();
+  }
   if (sceneNum === 0) {
     Scene1();
   } else if (sceneNum === 1) {
@@ -234,6 +238,10 @@ function draw() {
 
 //   Increment sceneNum with each mouse click
 mouseClicked = function() {
+  
+  if (mouseX <= 400 && mouseX >= 200 && mouseY <= 500 && mouseY >= 400 && sceneNum === -1) {
+    sceneNum = 0;
+  }
   //     About Screen
   if (mouseX <= 350 && mouseX >= 240 && mouseY <= 250 && mouseY >= 200 && sceneNum === 0) {
     sceneNum = 1;
