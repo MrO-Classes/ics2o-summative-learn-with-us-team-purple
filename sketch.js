@@ -1,5 +1,7 @@
 var img;
 
+var splashscreen;
+
 // Level 1 elements
 var spaceship;
 var oxygen;
@@ -7,8 +9,6 @@ var water;
 var asteroid1;
 var asteroid2;
 var asteorid3;
-var asteroid4;
-var asteroid5;
 var level1scores = [];
 var i;
 
@@ -29,6 +29,14 @@ var I;
 var spaceship3;
 var oxygen3;
 var water3;
+var Asteroid1;
+var Asteroid2;
+var Asteroid3;
+var Asteroid4;
+var Asteroid5;
+var Asteroid6;
+var Level3Scores = [];
+var i3;
 
 
 
@@ -61,7 +69,7 @@ var WRONGANSWEROY2 = [350, 350, 300, 300, 350];
 var WRONGANSWEROX3 = [70,   70,  70,  70,  70]; 
 var WRONGANSWEROY3 = [400, 400, 400, 350, 400];
 
-// Questions and answers for Water (Level 2)
+// Questions and answers for WATER (Level 2)
 var QUESTIONSW1 = ["Are these coin collections equal?", "True or false:", "Which coin should be added to make the statement true?", "True or false:", "Correct! You may proceed."];
 
 var QUESTIONSW2 = ["$2 + $3 + ¢50 + ¢5 and $2 + ¢50 + $3 + $5", "$10 - $6 - $2 ¢50 + $1 ¢50 = $3", "$3 ¢25 + ¢50 + _ = $4", "$7 can be represented with 1 bill/coin.", ""];
@@ -150,11 +158,61 @@ var wronganswerWY3 = [400, 350, 350, 400];
 
 var w = 0;
 
+// Questions and Answers for level 3
+
+// oxygen3
+
+var o3 = 0;
+
+var questions3O1 = ["Rachael eats with 3 friends, and food costs $9 ¢50", "Maryam has $10, and gives $5 to David. David gives $2 ¢80 to Rachael.", "Which of the following is true?", "If a bottle of water and chocolate bar together cost $5, and", "Maryam bought colouring pencils for $2 ¢50 and french fries for $5.", "Which of the following are enough to buy a chocolate bar that costs $2 ¢65", "Correct! You may proceed!"];
+
+var questions3O2 = ["If EACH friend pays $3, how much does Rachael pay?", "How much money does David now have left?", "", "the chocolate bar costs $1 ¢75, how much does the water cost?", "If she paid $10 IN TOTAL, how much change should she get back?", "", ""];
+
+var answers3O1 = ["$3",    "$10", "a toonie = ¢2",            "$3 ¢25", "$5", "$1 + ¢50 + ¢5 + $1", "" ];
+
+var answers3O2 = ["$3 ¢50", "$5", "¢10 + ¢10 + ¢50 = ¢25",    "$5",     "$7 ¢50", "$1 + $1 + ¢25 + ¢10 + ¢5 + ¢25", "" ];
+
+var answers3O3 = ["$9 ¢50", "$2 ¢20", "a loonie = ¢1",     "$1 ¢75", "$10",  "$2", "" ];
+
+var answers3O4 = ["$0",     "$2 ¢80", "$10 - $3 ¢80 = $6 ¢20", "$6 ¢75", "$2 ¢50", "", ""];
+
+var checkanswer3OX = [70,   70,  70,  70,  70];
+var checkanswer3OY = [300, 350, 250, 400, 300];
+
+var wronganswer3OX1 = [70,   70,  70,  70,  70];
+var wronganswer3OY1 = [250, 250, 300, 250, 250];
+
+var wronganswer3OX2 = [70,   70,  70,  70,  70];
+var wronganswer3OY2 = [350, 300, 350, 300, 350];
+
+var wronganswer3OX3 = [70,   70,  70,  70,  70];
+var wronganswer3OY3 = [400, 400, 400, 350, 400];
+
+// water3
+
+var w3 = 0;
+
+var questions3W1 = ["True or false:", "True or false:", "True or false:", "True or false:", "True or false:", "True or false:", "Correct! You may proceed!"];
+
+var questions3W2 = ["$7 can be represented with 1 bill/coin.", "3 loonies can buy a $2 ¢50 drink.", "$3 ¢50 can be represented with 1 bill/coin.", "$2 can be represented with 1 bill/coin.", "4 toonies can buy a $10 game", "5 toonies add up to $15", ""];
+
+var answers3W1 = ["True",   "True", "True",    "True", "True", "True", ""];
+
+var answers3W2 = ["False", "False", "False", "False", "False", "False", ""];
+
+var checkanswer3WX = [70,   70,  70,  70,  70,  70];
+var checkanswer3WY = [300, 250, 300, 250, 300, 300];
+
+var wronganswer3WX = [70,   70,  70,  70,  70,  70];
+var wronganswer3WY = [250, 300, 250, 300, 250, 250];
+
 
 
 
 function setup() {
   createCanvas(600, 600);
+  
+  splashscreen = new SplashScreen();
 
   //   Used in level 1
   spaceship = new Spaceship(100, 100);
@@ -180,6 +238,12 @@ function setup() {
   spaceship3 = new Spaceship(100, 100);
   oxygen3 = new Oxygen(300, 400);
   water3 = new Water(400, 200);
+  Asteroid1 = new Asteroid(200, 300);
+  Asteroid2 = new Asteroid(100, 400);
+  Asteroid3 = new Asteroid(400, 500);
+  Asteroid4 = new Asteroid(300, 300);
+  Asteroid5 = new Asteroid(400, 300);
+  Asteroid6 = new Asteroid(200, 500);
   
   img = loadImage('Logo.png');
 
@@ -193,7 +257,7 @@ function draw() {
   //   Draw each Scene
   
   if (sceneNum === -1) {
-    SplashScreen();
+    splashscreen.display();
   }
   if (sceneNum === 0) {
     Scene1();
@@ -229,6 +293,12 @@ function draw() {
     spaceship.win();
   } else if (sceneNum === 11) {
     SPACESHIP.lose();
+  } else if (sceneNum === 12) {
+    spaceship3.lose();
+  } else if (sceneNum === 13) {
+    spaceship3.win();
+  } else if (sceneNum === 14) {
+    spaceship3.complete();
   }
 
 
@@ -314,6 +384,27 @@ mouseClicked = function() {
   } else if (mouseX <= WRONGANSWERWX3[W] + 100 && mouseX >= WRONGANSWERWX3[W] - 10 && mouseY <= WRONGANSWERWY3[W] + 10 && mouseY >= WRONGANSWERWY3[W] - 10 && SPACESHIP.pos.x <= WATER.pos.x + 15 && SPACESHIP.pos.x >= WATER.pos.x - 15 && SPACESHIP.pos.y <= WATER.pos.y + 15 && SPACESHIP.pos.y >= WATER.pos.y - 15) {
     WATER.WrongAnswer();
   }
+  
+  //   water3 questions (level 3)
+  if (mouseX <= checkanswer3WX[w3] + 100 && mouseX >= checkanswer3WX[w3] - 10 && mouseY <= checkanswer3WY[w3] + 10 && mouseY >= checkanswer3WY[w3] - 10 && spaceship3.pos.x <= water3.pos.x + 15 && spaceship3.pos.x >= water3.pos.x - 15 && spaceship3.pos.y <= water3.pos.y + 15 && spaceship3.pos.y >= water3.pos.y - 15) {
+    water3.CorrectAnswer();
+  } else if (mouseX <= wronganswer3WX[w3] + 100 && mouseX >= wronganswer3WX[w3] - 10 && mouseY <= wronganswer3WY[w3] + 10 && mouseY >= wronganswer3WY[w3] - 10 && spaceship3.pos.x <= water3.pos.x + 15 && spaceship3.pos.x >= water3.pos.x - 15 && spaceship3.pos.y <= water3.pos.y + 15 && spaceship3.pos.y >= water3.pos.y - 15) {
+    water3.WrongAnswer();
+  }
+  
+//   oxygen3 questions (level 3)
+  if (mouseX <= checkanswer3OX[o3] + 50 && mouseX >= checkanswer3OX[o3] - 10 && mouseY <= checkanswer3OY[o3] + 10 && mouseY >= checkanswer3OY[o3] - 10 && spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) {
+    oxygen3.CorrectAnswer();
+  } else if (mouseX <= wronganswer3OX1[o3] + 100 && mouseX >= wronganswer3OX1[o3] - 10 && mouseY <= wronganswer3OY1[o3] + 10 && mouseY >= wronganswer3OY1[o3] - 10 && spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) {
+//     Display different question if answered incorrectly
+    oxygen3.WrongAnswer();
+  } else if (mouseX <= wronganswer3OX2[o3] + 100 && mouseX >= wronganswer3OX2[o3] - 10 && mouseY <= wronganswer3OY2[o3] + 10 && mouseY >= wronganswer3OY2[o3] - 10 && spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) {
+//     Display different question if answered incorrectly
+    oxygen3.WrongAnswer();
+  } else if (mouseX <= wronganswer3OX3[o3] + 100 && mouseX >= wronganswer3OX3[o3] - 10 && mouseY <= wronganswer3OY3[o3] + 10 && mouseY >= wronganswer3OY3[o3] - 10 && spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) {
+//     Display different question if answered incorrectly
+    oxygen3.WrongAnswer();
+  }
 
 
   //   Display Level 1
@@ -349,6 +440,18 @@ mouseClicked = function() {
     sceneNum = 9;
   }
   
+  //   End of Level 3 (Game completed or return to splash)
+  if (mouseX <= 285 && mouseX >= 200 && mouseY <= 510 && mouseY >= 450 && sceneNum === 13) {
+    sceneNum = 0;
+  } else if (mouseX <= 400 && mouseX >= 315 && mouseY <= 510 && mouseY >= 450 && sceneNum === 13) {
+    sceneNum = 14;
+  }
+  
+//   Game completed message (return to splash)
+  if (mouseX <= 342.5 && mouseX >= 257.5 && mouseY <= 510 && mouseY >= 450 && sceneNum === 14) {
+    sceneNum = 0;
+  }
+
 // Lost level 1 (return to splash or retry)
   
   if (mouseX <= 285 && mouseX >= 200 && mouseY <= 510 && mouseY >= 450 && sceneNum === 8) {
@@ -399,6 +502,39 @@ mouseClicked = function() {
     
     O = 0;
     W = 0;
+    
+    
+  }
+  
+//   Lost level 3 (return to splash or retry)
+  
+  if (mouseX <= 285 && mouseX >= 200 && mouseY <= 510 && mouseY >= 450 && sceneNum === 12) {
+    sceneNum = 0;
+//     Reset to original position
+    spaceship3.pos = createVector(100, 100);
+    Asteroid1.pos = createVector(200, 300);   
+    Asteroid2.pos = createVector(100, 400);
+    Asteroid3.pos = createVector(400, 500);
+    Asteroid4.pos = createVector(300, 300);
+    Asteroid5.pos = createVector(400, 300);
+    Asteroid6.pos = createVector(200, 500);
+    
+    o3 = 0;
+    w3 = 0;
+    
+  } else if (mouseX <= 400 && mouseX >= 315 && mouseY <= 510 && mouseY >= 450 && sceneNum === 12) {
+    sceneNum = 9;
+//     Reset to original position
+    spaceship3.pos = createVector(100, 100);
+    Asteroid1.pos = createVector(200, 300);   
+    Asteroid2.pos = createVector(100, 400);
+    Asteroid3.pos = createVector(400, 500);
+    Asteroid4.pos = createVector(300, 300);
+    Asteroid5.pos = createVector(400, 300);
+    Asteroid6.pos = createVector(200, 500);
+    
+    o3 = 0;
+    w3 = 0;
     
     
   }
