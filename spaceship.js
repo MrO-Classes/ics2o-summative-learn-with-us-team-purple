@@ -40,11 +40,15 @@ var Spaceship = function(x, y) {
     textSize(30);
     text("Level Failed!", 200, 200);
     this.score = 0;
+//     Reset variables
     O = 0;
     o = 0;
     W = 0;
     w = 0;
+    w3 = 0;
+    o3 = 0;
 
+//     Display message
     textSize(20);
     text("Score: 0", 200, 400);
     fill(255, 0, 0);
@@ -60,28 +64,38 @@ var Spaceship = function(x, y) {
   }
 
   this.win = function() {
-//     Display if you win the level
+    //     Display if you win the level
     background(0, 0, 0);
     fill(255, 255, 255);
     textSize(30);
     text("Level Complete!", 200, 200);
     this.score += 50;
+//     Reset all variables to 0
     O = 0;
     W = 0;
     I = 0;
     o = 0;
     w = 0;
     i = 0;
-    
+    o3 = 0;
+    w3 = 0;
+    i3 = 0;
+
     if (sceneNum === 7) {
-        textSize(20);
-        text("Score: " + Level2Scores[I], 200, 400);
-        Level2Scores.push(this.score);
+      textSize(20);
+      text("Score: " + Level2Scores[I], 200, 400);
+      Level2Scores.push(this.score);
     } else if (sceneNum === 10) {
-        textSize(20);
-        text("Score: " + level1scores[i], 200, 400);
-        level1scores.push(this.score);
+      textSize(20);
+      text("Score: " + level1scores[i], 200, 400);
+      level1scores.push(this.score);
+    } else if (sceneNum === 13) {
+      textSize(20);
+      text("Score: " + Level3Scores[i3], 200, 400);
+      Level3Scores.push(this.score);
     }
+    
+//     Display message
     textSize(20);
     fill(255, 0, 0);
     rect(200, 450, 85, 60);
@@ -94,6 +108,21 @@ var Spaceship = function(x, y) {
     text("Level", 330, 495);
     this.pos = createVector(100, 100);
 
+  }
+  
+  this.complete = function() {
+//     Display if game is completed (whole game finished)
+    background(0, 0, 0);
+    textSize(30);
+    fill(255, 255, 255);
+    text("Congratulations!!", 200, 200);
+    textSize(20);
+    text("Thanks to you, the Earth has now been saved!", 150, 300);
+    fill(255, 0, 0);
+    rect(257.5, 450, 85, 60);
+    fill(0, 0, 0);
+    text("Home", 272.5, 485);
+    
   }
 
 
