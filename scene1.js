@@ -20,6 +20,7 @@ var Scene1 = function() {
   
 //   Logo
   fill(0, 55, 194);
+  // ellipse(500, 500, 100, 100);
   image(img, 390, 500, 200, 50);
 
   
