@@ -3,10 +3,11 @@ var Spaceship = function(x, y) {
   this.pos = createVector(x, y);
   this.size = 75;
   this.score = 0;
+  this.img = loadImage('Rocketship_Cropped_V3.png');
 
   this.display = function() {
     fill(223, 224, 182);
-    ellipse(this.pos.x, this.pos.y, this.size, this.size);
+    image(this.img, this.pos.x, this.pos.y, this.size + 20, this.size);
 
     //     Move spaceship
     if (keyIsPressed && keyCode === 38) {
