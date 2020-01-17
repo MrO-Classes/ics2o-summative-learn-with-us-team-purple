@@ -1,4 +1,6 @@
 var img;
+var img1;
+var img2;
 
 var splashscreen;
 
@@ -44,7 +46,7 @@ var i3;
 var O = 0;
 
 //   Questions and answers for Oxygen (Level 2)
-var QUESTIONSO1 = ["$5 + 7 quarters = ?", "Jack spends $2 ¢50 on socks and $5 ¢40 on gloves.", "A bag of gummy bears costs $5.25. You pay $10.00.", "$7 ¢50 - ¢10 = ?",  "Afnan gets $7 from her parents and she spends $3.00.","Correct! You may move on!"];
+var QUESTIONSO1 = ["$5 + 7 quarters = ?", "Jack spends $2 ¢50 on socks and $5 ¢40 on gloves.", "A bag of gummy bears costs $5.25. You pay $10.00.", "$7 ¢50 - ¢10 = ?",  "Afnan gets $7 from her parents and she spends $3.00.","Correct! You may proceed!"];
 
 var QUESTIONSO2 = ["", "If he had $10, how much does he have left?", "How much CHANGE will you be given?","", "How much money does she have left?", ""];
 
@@ -246,6 +248,8 @@ function setup() {
   Asteroid6 = new Asteroid(200, 500);
   
   img = loadImage('Logo.png');
+  img1 = loadImage('Star_V2.png');
+  img2 = loadImage('Earth_V2.png');
 
 
 }
