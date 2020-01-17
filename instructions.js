@@ -1,6 +1,13 @@
 var Instructions = function() {
   textSize(50);
   background(0, 0, 0);
+  image(img1, 100, 100, 40, 40);
+  image(img1, 25, 300, 40, 40);
+  image(img1, 200, 500, 40, 40);
+  image(img1, 450, 220, 40, 40);
+  image(img1, 525, 400, 40, 40);
+  image(img1, 550, 50, 40, 40);
+
   fill(255, 255, 255);
   text("Instructions", 175, 100);
   
