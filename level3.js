@@ -17,7 +17,7 @@ var Level3 = function() {
   
 //   Display in bottom left (score) and right corner (rectangle)
   fill(0, 255, 0);
-  rect(500, 500, 100, 100);
+  image(img2, 500, 500, 100, 100);
   fill(255, 255, 255);
   textSize(20);
   text("Level 3", 10, 525);
