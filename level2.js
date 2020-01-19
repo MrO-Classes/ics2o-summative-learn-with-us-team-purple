@@ -43,7 +43,9 @@ ASTEROID5.pos.y <= SPACESHIP.pos.y + 75 && ASTEROID5.pos.y >= SPACESHIP.pos.y) {
   
   
   //   Check if SPACESHIP is touching OXYGEN
-  if (SPACESHIP.pos.x <= OXYGEN.pos.x + 22.5 && SPACESHIP.pos.x >= OXYGEN.pos.x - 22.5 && SPACESHIP.pos.y <= OXYGEN.pos.y + 22.5 && SPACESHIP.pos.y >= OXYGEN.pos.y - 22.5) {
+  if (SPACESHIP.pos.x <= OXYGEN.pos.x + 30 && SPACESHIP.pos.x >= OXYGEN.pos.x - 30 && 
+SPACESHIP.pos.y <= OXYGEN.pos.y + 30 && 
+SPACESHIP.pos.y >= OXYGEN.pos.y - 30) {
     fill(255, 255, 255);
     rect(50, 100, 500, 400);
     textSize(18);
@@ -58,7 +60,7 @@ ASTEROID5.pos.y <= SPACESHIP.pos.y + 75 && ASTEROID5.pos.y >= SPACESHIP.pos.y) {
   }
   
       //     Check if SPACESHIP is touching water
-    if (SPACESHIP.pos.x <= WATER.pos.x + 15 && SPACESHIP.pos.x >= WATER.pos.x - 25 && SPACESHIP.pos.y <= WATER.pos.y + 15 && SPACESHIP.pos.y >= WATER.pos.y - 25) {
+    if (SPACESHIP.pos.x <= WATER.pos.x + 20 && SPACESHIP.pos.x >= WATER.pos.x - 20 && SPACESHIP.pos.y <= WATER.pos.y + 20 && SPACESHIP.pos.y >= WATER.pos.y - 20) {
       fill(255, 255, 255);
       rect(50, 100, 500, 400);
       textSize(18);
