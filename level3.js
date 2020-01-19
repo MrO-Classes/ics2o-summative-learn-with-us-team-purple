@@ -1,17 +1,23 @@
 var Level3 = function() {
   
 //   Check if spaceship3 is touching oxygen3 or water3
-  if (!(spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) && ! (spaceship3.pos.x <= water3.pos.x + 15 && spaceship3.pos.x >= water3.pos.x - 15 && spaceship3.pos.y <= water3.pos.y + 15 && spaceship3.pos.y >= water3.pos.y - 15) && Asteroid1.pos.x <= spaceship3.pos.x + 20 && Asteroid1.pos.x >= spaceship3.pos.x - 20 && Asteroid1.pos.y <= spaceship3.pos.y + 20 && Asteroid1.pos.y >= spaceship3.pos.y - 20) {
+  if (!(spaceship3.pos.x <= oxygen3.pos.x + 30 && spaceship3.pos.x >= oxygen3.pos.x - 30 && spaceship3.pos.y <= oxygen3.pos.y + 30 && spaceship3.pos.y >= oxygen3.pos.y - 30) && ! (spaceship3.pos.x <= water3.pos.x + 20 && spaceship3.pos.x >= water3.pos.x - 20 && spaceship3.pos.y <= water3.pos.y + 20 && spaceship3.pos.y >= water3.pos.y - 20) && Asteroid1.pos.x <= spaceship3.pos.x + 90 && Asteroid1.pos.x >= spaceship3.pos.x && 
+Asteroid1.pos.y <= spaceship3.pos.y + 75 && Asteroid1.pos.y >= spaceship3.pos.y) {
   sceneNum = 12;
-} else if (!(spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) && !(spaceship3.pos.x <= water3.pos.x + 15 && spaceship3.pos.x >= water3.pos.x - 15 && spaceship3.pos.y <= water3.pos.y + 15 && spaceship3.pos.y >= water3.pos.y - 15) && Asteroid2.pos.x <= spaceship3.pos.x + 20 && Asteroid2.pos.x >= spaceship3.pos.x - 20 && Asteroid2.pos.y <= spaceship3.pos.y + 20 && Asteroid2.pos.y >= spaceship3.pos.y - 20) {
+} else if (!(spaceship3.pos.x <= oxygen3.pos.x + 30 && spaceship3.pos.x >= oxygen3.pos.x - 30 && spaceship3.pos.y <= oxygen3.pos.y + 30 && spaceship3.pos.y >= oxygen3.pos.y - 30) && !(spaceship3.pos.x <= water3.pos.x + 20 && spaceship3.pos.x >= water3.pos.x - 20 && spaceship3.pos.y <= water3.pos.y + 20 && spaceship3.pos.y >= water3.pos.y - 20) && Asteroid2.pos.x <= spaceship3.pos.x + 90 && Asteroid2.pos.x >= spaceship3.pos.x && 
+Asteroid2.pos.y <= spaceship3.pos.y + 75 && Asteroid2.pos.y >= spaceship3.pos.y) {
   sceneNum = 12;
-} else if (!(spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) && !(spaceship3.pos.x <= water3.pos.x + 15 && spaceship3.pos.x >= water3.pos.x - 15 && spaceship3.pos.y <= water3.pos.y + 15 && spaceship3.pos.y >= water3.pos.y - 15) &&  Asteroid3.pos.x <= spaceship3.pos.x + 20 && Asteroid3.pos.x >= spaceship3.pos.x - 20 && Asteroid3.pos.y <= spaceship3.pos.y + 20 && Asteroid3.pos.y >= spaceship3.pos.y - 20) {
+} else if (!(spaceship3.pos.x <= oxygen3.pos.x + 30 && spaceship3.pos.x >= oxygen3.pos.x - 30 && spaceship3.pos.y <= oxygen3.pos.y + 30 && spaceship3.pos.y >= oxygen3.pos.y - 30) && !(spaceship3.pos.x <= water3.pos.x + 20 && spaceship3.pos.x >= water3.pos.x - 20 && spaceship3.pos.y <= water3.pos.y + 20 && spaceship3.pos.y >= water3.pos.y - 20) &&  Asteroid3.pos.x <= spaceship3.pos.x + 90 && Asteroid3.pos.x >= spaceship3.pos.x && 
+Asteroid3.pos.y <= spaceship3.pos.y + 75 && Asteroid3.pos.y >= spaceship3.pos.y) {
   sceneNum = 12;
-} else if (!(spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) && !(spaceship3.pos.x <= water3.pos.x + 15 && spaceship3.pos.x >= water3.pos.x - 15 && spaceship3.pos.y <= water3.pos.y + 15 && spaceship3.pos.y >= water3.pos.y - 15) &&  Asteroid4.pos.x <= spaceship3.pos.x + 20 && Asteroid4.pos.x >= spaceship3.pos.x - 20 && Asteroid4.pos.y <= spaceship3.pos.y + 20 && Asteroid4.pos.y >= spaceship3.pos.y - 20) {
+} else if (!(spaceship3.pos.x <= oxygen3.pos.x + 30 && spaceship3.pos.x >= oxygen3.pos.x - 30 && spaceship3.pos.y <= oxygen3.pos.y + 30 && spaceship3.pos.y >= oxygen3.pos.y - 30) && !(spaceship3.pos.x <= water3.pos.x + 20 && spaceship3.pos.x >= water3.pos.x - 20 && spaceship3.pos.y <= water3.pos.y + 20 && spaceship3.pos.y >= water3.pos.y - 20) &&  Asteroid4.pos.x <= spaceship3.pos.x + 90 && Asteroid4.pos.x >= spaceship3.pos.x && 
+Asteroid4.pos.y <= spaceship3.pos.y + 75 && Asteroid4.pos.y >= spaceship3.pos.y) {
   sceneNum = 12;
-} else if (!(spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) && !(spaceship3.pos.x <= water3.pos.x + 15 && spaceship3.pos.x >= water3.pos.x - 15 && spaceship3.pos.y <= water3.pos.y + 15 && spaceship3.pos.y >= water3.pos.y - 15) &&  Asteroid5.pos.x <= spaceship3.pos.x + 20 && Asteroid5.pos.x >= spaceship3.pos.x - 20 && Asteroid5.pos.y <= spaceship3.pos.y + 20 && Asteroid5.pos.y >= spaceship3.pos.y - 20) {
+} else if (!(spaceship3.pos.x <= oxygen3.pos.x + 30 && spaceship3.pos.x >= oxygen3.pos.x - 30 && spaceship3.pos.y <= oxygen3.pos.y + 30 && spaceship3.pos.y >= oxygen3.pos.y - 30) && !(spaceship3.pos.x <= water3.pos.x + 20 && spaceship3.pos.x >= water3.pos.x - 20 && spaceship3.pos.y <= water3.pos.y + 20 && spaceship3.pos.y >= water3.pos.y - 20) &&  Asteroid5.pos.x <= spaceship3.pos.x + 90 && Asteroid5.pos.x >= spaceship3.pos.x && 
+Asteroid5.pos.y <= spaceship3.pos.y + 75 && Asteroid5.pos.y >= spaceship3.pos.y) {
   sceneNum = 12;
-} else if (!(spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) && !(spaceship3.pos.x <= water3.pos.x + 15 && spaceship3.pos.x >= water3.pos.x - 15 && spaceship3.pos.y <= water3.pos.y + 15 && spaceship3.pos.y >= water3.pos.y - 15) &&  Asteroid6.pos.x <= spaceship3.pos.x + 20 && Asteroid6.pos.x >= spaceship3.pos.x - 20 && Asteroid6.pos.y <= spaceship3.pos.y + 20 && Asteroid6.pos.y >= spaceship3.pos.y - 20) {
+} else if (!(spaceship3.pos.x <= oxygen3.pos.x + 30 && spaceship3.pos.x >= oxygen3.pos.x - 30 && spaceship3.pos.y <= oxygen3.pos.y + 30 && spaceship3.pos.y >= oxygen3.pos.y - 30) && !(spaceship3.pos.x <= water3.pos.x + 20 && spaceship3.pos.x >= water3.pos.x - 20 && spaceship3.pos.y <= water3.pos.y + 20 && spaceship3.pos.y >= water3.pos.y - 20) &&  Asteroid6.pos.x <= spaceship3.pos.x + 90 && Asteroid6.pos.x >= spaceship3.pos.x && 
+Asteroid6.pos.y <= spaceship3.pos.y + 75 && Asteroid6.pos.y >= spaceship3.pos.y) {
   sceneNum = 12;
 }
   
@@ -38,7 +44,7 @@ var Level3 = function() {
 
   
     //   Check if spaceship3 is touching oxygen3
-  if (spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) {
+  if (spaceship3.pos.x <= oxygen3.pos.x + 30 && spaceship3.pos.x >= oxygen3.pos.x - 30 && spaceship3.pos.y <= oxygen3.pos.y + 30 && spaceship3.pos.y >= oxygen3.pos.y - 30) {
     fill(255, 255, 255);
     rect(50, 100, 500, 400);
     textSize(18);
@@ -53,7 +59,7 @@ var Level3 = function() {
   }
   
   //     Check if spaceship3 is touching water3
-    if (spaceship3.pos.x <= water3.pos.x + 15 && spaceship3.pos.x >= water3.pos.x - 15 && spaceship3.pos.y <= water3.pos.y + 15 && spaceship3.pos.y >= water3.pos.y - 15) {
+    if (spaceship3.pos.x <= water3.pos.x + 20 && spaceship3.pos.x >= water3.pos.x - 20 && spaceship3.pos.y <= water3.pos.y + 20 && spaceship3.pos.y >= water3.pos.y - 20) {
       fill(255, 255, 255);
       rect(50, 100, 500, 400);
       textSize(18);
