@@ -32,7 +32,7 @@ var Water = function(x, y) {
       w ++;
     } else if (sceneNum === 6) {
       W ++;
-    } else if (sceneNum === 0) {
+    } else if (sceneNum === 9) {
       w3 ++;
     }
     
