@@ -341,71 +341,89 @@ mouseClicked = function() {
   }
   
 //   Show that oxygen questions were answered correctly (level 1)
-  if (mouseX <= checkanswerOX[o] + 100 && mouseX >= checkanswerOX[o] - 10 && mouseY <= checkanswerOY[o] + 10 && mouseY >= checkanswerOY[o] - 10 && spaceship.pos.x <= oxygen.pos.x + 22.5 && spaceship.pos.x >= oxygen.pos.x - 22.5 && spaceship.pos.y <= oxygen.pos.y + 22.5 && spaceship.pos.y >= oxygen.pos.y - 22.5) {
+  if (mouseX <= checkanswerOX[o] + 100 && mouseX >= checkanswerOX[o] - 10 && mouseY <= checkanswerOY[o] + 10 && mouseY >= checkanswerOY[o] - 10 && spaceship.pos.x <= oxygen.pos.x + 30 && 
+spaceship.pos.x >= oxygen.pos.x - 30 && 
+spaceship.pos.y <= oxygen.pos.y + 30 && 
+spaceship.pos.y >= oxygen.pos.y - 30) {
     oxygen.CorrectAnswer();
-  } else if (mouseX <= wronganswerOX1[o] + 100 && mouseX >= wronganswerOX1[o] - 10 && mouseY <= wronganswerOY1[o] + 10 && mouseY >= wronganswerOY1[o] - 10 && spaceship.pos.x <= oxygen.pos.x + 22.5 && spaceship.pos.x >= oxygen.pos.x - 22.5 && spaceship.pos.y <= oxygen.pos.y + 22.5 && spaceship.pos.y >= oxygen.pos.y - 22.5) {
+  } else if (mouseX <= wronganswerOX1[o] + 100 && mouseX >= wronganswerOX1[o] - 10 && mouseY <= wronganswerOY1[o] + 10 && mouseY >= wronganswerOY1[o] - 10 && spaceship.pos.x <= oxygen.pos.x + 30 && spaceship.pos.x >= oxygen.pos.x - 30 && 
+spaceship.pos.y <= oxygen.pos.y + 30 && 
+spaceship.pos.y >= oxygen.pos.y - 30) {
     oxygen.WrongAnswer();
-  } else if (mouseX <= wronganswerOX2[o] + 100 && mouseX >= wronganswerOX2[o] - 10 && mouseY <= wronganswerOY2[o] + 10 && mouseY >= wronganswerOY2[o] - 10 && spaceship.pos.x <= oxygen.pos.x + 22.5 && spaceship.pos.x >= oxygen.pos.x - 22.5 && spaceship.pos.y <= oxygen.pos.y + 22.5 && spaceship.pos.y >= oxygen.pos.y - 22.5) {
+  } else if (mouseX <= wronganswerOX2[o] + 100 && mouseX >= wronganswerOX2[o] - 10 && mouseY <= wronganswerOY2[o] + 10 && mouseY >= wronganswerOY2[o] - 10 && spaceship.pos.x <= oxygen.pos.x + 30 && spaceship.pos.x >= oxygen.pos.x - 30 && 
+spaceship.pos.y <= oxygen.pos.y + 30 && 
+spaceship.pos.y >= oxygen.pos.y - 30) {
     oxygen.WrongAnswer();
-  } else if (mouseX <= wronganswerOX3[o] + 100 && mouseX >= wronganswerOX3[o] - 10 && mouseY <= wronganswerOY3[o] + 10 && mouseY >= wronganswerOY3[o] - 10 && spaceship.pos.x <= oxygen.pos.x + 22.5 && spaceship.pos.x >= oxygen.pos.x - 22.5 && spaceship.pos.y <= oxygen.pos.y + 22.5 && spaceship.pos.y >= oxygen.pos.y - 22.5) {
+  } else if (mouseX <= wronganswerOX3[o] + 100 && mouseX >= wronganswerOX3[o] - 10 && mouseY <= wronganswerOY3[o] + 10 && mouseY >= wronganswerOY3[o] - 10 && spaceship.pos.x <= oxygen.pos.x + 30 && spaceship.pos.x >= oxygen.pos.x - 30 && 
+spaceship.pos.y <= oxygen.pos.y + 30 && 
+spaceship.pos.y >= oxygen.pos.y - 30) {
     oxygen.WrongAnswer();
   }
 
 //   water questions (level 1)
-  if (mouseX <= checkanswerWX[w] + 100 && mouseX >= checkanswerWX[w] - 10 && mouseY <= checkanswerWY[w] + 10 && mouseY >= checkanswerWY[w] - 10 && spaceship.pos.x <= water.pos.x + 15 && spaceship.pos.x >= water.pos.x - 15 && spaceship.pos.y <= water.pos.y + 15 && spaceship.pos.y >= water.pos.y - 15) {
+  if (mouseX <= checkanswerWX[w] + 100 && mouseX >= checkanswerWX[w] - 10 && mouseY <= checkanswerWY[w] + 10 && mouseY >= checkanswerWY[w] - 10 && spaceship.pos.x <= water.pos.x + 20 && spaceship.pos.x >= water.pos.x - 20 && spaceship.pos.y <= water.pos.y + 20 && spaceship.pos.y >= water.pos.y - 20) {
     water.CorrectAnswer();
-  } else if (mouseX <= wronganswerWX1[w] + 100 && mouseX >= wronganswerWX1[w] - 10 && mouseY <= wronganswerWY1[w] + 10 && mouseY >= wronganswerWY1[w] - 10 && spaceship.pos.x <= water.pos.x + 15 && spaceship.pos.x >= water.pos.x - 15 && spaceship.pos.y <= water.pos.y + 15 && spaceship.pos.y >= water.pos.y - 15) {
+  } else if (mouseX <= wronganswerWX1[w] + 100 && mouseX >= wronganswerWX1[w] - 10 && mouseY <= wronganswerWY1[w] + 10 && mouseY >= wronganswerWY1[w] - 10 && spaceship.pos.x <= water.pos.x + 20 && spaceship.pos.x >= water.pos.x - 20 && spaceship.pos.y <= water.pos.y + 20 && spaceship.pos.y >= water.pos.y - 20) {
     water.WrongAnswer();
-  } else if (mouseX <= wronganswerWX2[w] + 100 && mouseX >= wronganswerWX2[w] - 10 && mouseY <= wronganswerWY2[w] + 10 && mouseY >= wronganswerWY2[w] - 10 && spaceship.pos.x <= water.pos.x + 15 && spaceship.pos.x >= water.pos.x - 15 && spaceship.pos.y <= water.pos.y + 15 && spaceship.pos.y >= water.pos.y - 15) {
+  } else if (mouseX <= wronganswerWX2[w] + 100 && mouseX >= wronganswerWX2[w] - 10 && mouseY <= wronganswerWY2[w] + 10 && mouseY >= wronganswerWY2[w] - 10 && spaceship.pos.x <= water.pos.x + 20 && spaceship.pos.x >= water.pos.x - 20 && spaceship.pos.y <= water.pos.y + 20 && spaceship.pos.y >= water.pos.y - 20) {
     water.WrongAnswer();
-  } else if (mouseX <= wronganswerWX3[w] + 100 && mouseX >= wronganswerWX3[w] - 10 && mouseY <= wronganswerWY3[w] + 10 && mouseY >= wronganswerWY3[w] - 10 && spaceship.pos.x <= water.pos.x + 15 && spaceship.pos.x >= water.pos.x - 15 && spaceship.pos.y <= water.pos.y + 15 && spaceship.pos.y >= water.pos.y - 15) {
+  } else if (mouseX <= wronganswerWX3[w] + 100 && mouseX >= wronganswerWX3[w] - 10 && mouseY <= wronganswerWY3[w] + 10 && mouseY >= wronganswerWY3[w] - 10 && spaceship.pos.x <= water.pos.x + 20 && spaceship.pos.x >= water.pos.x - 20 && spaceship.pos.y <= water.pos.y + 20 && spaceship.pos.y >= water.pos.y - 20) {
     water.WrongAnswer();
   }
   
   
 //   Show that question was answered correctly (level 2)
-  if (mouseX <= CHECKANSWEROX[O] + 50 && mouseX >= CHECKANSWEROX[O] - 10 && mouseY <= CHECKANSWEROY[O] + 10 && mouseY >= CHECKANSWEROY[O] - 10 && SPACESHIP.pos.x <= OXYGEN.pos.x + 22.5 && SPACESHIP.pos.x >= OXYGEN.pos.x - 22.5 && SPACESHIP.pos.y <= OXYGEN.pos.y + 22.5 && SPACESHIP.pos.y >= OXYGEN.pos.y - 22.5) {
+  if (mouseX <= CHECKANSWEROX[O] + 50 && mouseX >= CHECKANSWEROX[O] - 10 && mouseY <= CHECKANSWEROY[O] + 10 && mouseY >= CHECKANSWEROY[O] - 10 && SPACESHIP.pos.x <= OXYGEN.pos.x + 30 && 
+SPACESHIP.pos.x >= OXYGEN.pos.x - 30 && 
+SPACESHIP.pos.y <= OXYGEN.pos.y + 30 && 
+SPACESHIP.pos.y >= OXYGEN.pos.y - 30) {
 //     Display message saying that the question was correctly answered (Oxygen)
     OXYGEN.CorrectAnswer();
-  } else if (mouseX <= WRONGANSWEROX1[O] + 100 && mouseX >= WRONGANSWEROX1[O] - 10 && mouseY <= WRONGANSWEROY1[O] + 10 && mouseY >= WRONGANSWEROY1[O] - 10 && SPACESHIP.pos.x <= OXYGEN.pos.x + 22.5 && SPACESHIP.pos.x >= OXYGEN.pos.x - 22.5 && SPACESHIP.pos.y <= OXYGEN.pos.y + 22.5 && SPACESHIP.pos.y >= OXYGEN.pos.y - 22.5) {
+  } else if (mouseX <= WRONGANSWEROX1[O] + 100 && mouseX >= WRONGANSWEROX1[O] - 10 && mouseY <= WRONGANSWEROY1[O] + 10 && mouseY >= WRONGANSWEROY1[O] - 10 && SPACESHIP.pos.x <= OXYGEN.pos.x + 30 && SPACESHIP.pos.x >= OXYGEN.pos.x - 30 &&
+SPACESHIP.pos.y <= OXYGEN.pos.y + 30 && 
+SPACESHIP.pos.y >= OXYGEN.pos.y - 30) {
 //     Display different question if answered incorrectly
     OXYGEN.WrongAnswer();
-  } else if (mouseX <= WRONGANSWEROX2[O] + 100 && mouseX >= WRONGANSWEROX2[O] - 10 && mouseY <= WRONGANSWEROY2[O] + 10 && mouseY >= WRONGANSWEROY2[O] - 10 && SPACESHIP.pos.x <= OXYGEN.pos.x + 22.5 && SPACESHIP.pos.x >= OXYGEN.pos.x - 22.5 && SPACESHIP.pos.y <= OXYGEN.pos.y + 22.5 && SPACESHIP.pos.y >= OXYGEN.pos.y - 22.5) {
+  } else if (mouseX <= WRONGANSWEROX2[O] + 100 && mouseX >= WRONGANSWEROX2[O] - 10 && mouseY <= WRONGANSWEROY2[O] + 10 && mouseY >= WRONGANSWEROY2[O] - 10 && SPACESHIP.pos.x <= OXYGEN.pos.x + 30 && SPACESHIP.pos.x >= OXYGEN.pos.x - 30 && 
+SPACESHIP.pos.y <= OXYGEN.pos.y + 30 && 
+SPACESHIP.pos.y >= OXYGEN.pos.y - 30) {
 //     Display different question if answered incorrectly
     OXYGEN.WrongAnswer();
-  } else if (mouseX <= WRONGANSWEROX3[O] + 100 && mouseX >= WRONGANSWEROX3[O] - 10 && mouseY <= WRONGANSWEROY3[O] + 10 && mouseY >= WRONGANSWEROY3[O] - 10 && SPACESHIP.pos.x <= OXYGEN.pos.x + 22.5 && SPACESHIP.pos.x >= OXYGEN.pos.x - 22.5 && SPACESHIP.pos.y <= OXYGEN.pos.y + 22.5 && SPACESHIP.pos.y >= OXYGEN.pos.y - 22.5) {
+  } else if (mouseX <= WRONGANSWEROX3[O] + 100 && mouseX >= WRONGANSWEROX3[O] - 10 && mouseY <= WRONGANSWEROY3[O] + 10 && mouseY >= WRONGANSWEROY3[O] - 10 && SPACESHIP.pos.x <= OXYGEN.pos.x + 30 && SPACESHIP.pos.x >= OXYGEN.pos.x - 30 && 
+SPACESHIP.pos.y <= OXYGEN.pos.y + 30 && 
+SPACESHIP.pos.y >= OXYGEN.pos.y - 30) {
 //     Display different question if answered incorrectly
     OXYGEN.WrongAnswer();
   }
   
 //   Water questions (level 2)
-  if (mouseX <= CHECKANSWERWX[W] + 100 && mouseX >= CHECKANSWERWX[W] - 10 && mouseY <= CHECKANSWERWY[W] + 10 && mouseY >= CHECKANSWERWY[W] - 10 && SPACESHIP.pos.x <= WATER.pos.x + 15 && SPACESHIP.pos.x >= WATER.pos.x - 15 && SPACESHIP.pos.y <= WATER.pos.y + 15 && SPACESHIP.pos.y >= WATER.pos.y - 15) {
+  if (mouseX <= CHECKANSWERWX[W] + 100 && mouseX >= CHECKANSWERWX[W] - 10 && mouseY <= CHECKANSWERWY[W] + 10 && mouseY >= CHECKANSWERWY[W] - 10 && SPACESHIP.pos.x <= WATER.pos.x + 20 && SPACESHIP.pos.x >= WATER.pos.x - 20 && SPACESHIP.pos.y <= WATER.pos.y + 20 && SPACESHIP.pos.y >= WATER.pos.y - 20) {
     WATER.CorrectAnswer();
-  } else if (mouseX <= WRONGANSWERWX1[W] + 100 && mouseX >= WRONGANSWERWX1[W] - 10 && mouseY <= WRONGANSWERWY1[W] + 10 && mouseY >= WRONGANSWERWY1[W] - 10 && SPACESHIP.pos.x <= WATER.pos.x + 15 && SPACESHIP.pos.x >= WATER.pos.x - 15 && SPACESHIP.pos.y <= WATER.pos.y + 15 && SPACESHIP.pos.y >= WATER.pos.y - 15) {
+  } else if (mouseX <= WRONGANSWERWX1[W] + 100 && mouseX >= WRONGANSWERWX1[W] - 10 && mouseY <= WRONGANSWERWY1[W] + 10 && mouseY >= WRONGANSWERWY1[W] - 10 && SPACESHIP.pos.x <= WATER.pos.x + 20 && SPACESHIP.pos.x >= WATER.pos.x - 20 && SPACESHIP.pos.y <= WATER.pos.y + 20 && SPACESHIP.pos.y >= WATER.pos.y - 20) {
     WATER.WrongAnswer();
-  } else if (mouseX <= WRONGANSWERWX2[W] + 100 && mouseX >= WRONGANSWERWX2[W] - 10 && mouseY <= WRONGANSWERWY2[W] + 10 && mouseY >= WRONGANSWERWY2[W] - 10 && SPACESHIP.pos.x <= WATER.pos.x + 15 && SPACESHIP.pos.x >= WATER.pos.x - 15 && SPACESHIP.pos.y <= WATER.pos.y + 15 && SPACESHIP.pos.y >= WATER.pos.y - 15) {
+  } else if (mouseX <= WRONGANSWERWX2[W] + 100 && mouseX >= WRONGANSWERWX2[W] - 10 && mouseY <= WRONGANSWERWY2[W] + 10 && mouseY >= WRONGANSWERWY2[W] - 10 && SPACESHIP.pos.x <= WATER.pos.x + 20 && SPACESHIP.pos.x >= WATER.pos.x - 20 && SPACESHIP.pos.y <= WATER.pos.y + 20 && SPACESHIP.pos.y >= WATER.pos.y - 20) {
     WATER.WrongAnswer();
-  } else if (mouseX <= WRONGANSWERWX3[W] + 100 && mouseX >= WRONGANSWERWX3[W] - 10 && mouseY <= WRONGANSWERWY3[W] + 10 && mouseY >= WRONGANSWERWY3[W] - 10 && SPACESHIP.pos.x <= WATER.pos.x + 15 && SPACESHIP.pos.x >= WATER.pos.x - 15 && SPACESHIP.pos.y <= WATER.pos.y + 15 && SPACESHIP.pos.y >= WATER.pos.y - 15) {
+  } else if (mouseX <= WRONGANSWERWX3[W] + 100 && mouseX >= WRONGANSWERWX3[W] - 10 && mouseY <= WRONGANSWERWY3[W] + 10 && mouseY >= WRONGANSWERWY3[W] - 10 && SPACESHIP.pos.x <= WATER.pos.x + 20 && SPACESHIP.pos.x >= WATER.pos.x - 20 && SPACESHIP.pos.y <= WATER.pos.y + 20 && SPACESHIP.pos.y >= WATER.pos.y - 20) {
     WATER.WrongAnswer();
   }
   
   //   water3 questions (level 3)
-  if (mouseX <= checkanswer3WX[w3] + 100 && mouseX >= checkanswer3WX[w3] - 10 && mouseY <= checkanswer3WY[w3] + 10 && mouseY >= checkanswer3WY[w3] - 10 && spaceship3.pos.x <= water3.pos.x + 15 && spaceship3.pos.x >= water3.pos.x - 15 && spaceship3.pos.y <= water3.pos.y + 15 && spaceship3.pos.y >= water3.pos.y - 15) {
+  if (mouseX <= checkanswer3WX[w3] + 100 && mouseX >= checkanswer3WX[w3] - 10 && mouseY <= checkanswer3WY[w3] + 10 && mouseY >= checkanswer3WY[w3] - 10 && spaceship3.pos.x <= water3.pos.x + 20 && spaceship3.pos.x >= water3.pos.x - 20 && spaceship3.pos.y <= water3.pos.y + 20 && spaceship3.pos.y >= water3.pos.y - 20) {
     water3.CorrectAnswer();
-  } else if (mouseX <= wronganswer3WX[w3] + 100 && mouseX >= wronganswer3WX[w3] - 10 && mouseY <= wronganswer3WY[w3] + 10 && mouseY >= wronganswer3WY[w3] - 10 && spaceship3.pos.x <= water3.pos.x + 15 && spaceship3.pos.x >= water3.pos.x - 15 && spaceship3.pos.y <= water3.pos.y + 15 && spaceship3.pos.y >= water3.pos.y - 15) {
+  } else if (mouseX <= wronganswer3WX[w3] + 100 && mouseX >= wronganswer3WX[w3] - 10 && mouseY <= wronganswer3WY[w3] + 10 && mouseY >= wronganswer3WY[w3] - 10 && spaceship3.pos.x <= water3.pos.x + 20 && spaceship3.pos.x >= water3.pos.x - 20 && spaceship3.pos.y <= water3.pos.y + 20 && spaceship3.pos.y >= water3.pos.y - 20) {
     water3.WrongAnswer();
   }
   
 //   oxygen3 questions (level 3)
-  if (mouseX <= checkanswer3OX[o3] + 50 && mouseX >= checkanswer3OX[o3] - 10 && mouseY <= checkanswer3OY[o3] + 10 && mouseY >= checkanswer3OY[o3] - 10 && spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) {
+  if (mouseX <= checkanswer3OX[o3] + 50 && mouseX >= checkanswer3OX[o3] - 10 && mouseY <= checkanswer3OY[o3] + 10 && mouseY >= checkanswer3OY[o3] - 10 && spaceship3.pos.x <= oxygen3.pos.x + 30 && spaceship3.pos.x >= oxygen3.pos.x - 30 && spaceship3.pos.y <= oxygen3.pos.y + 30 && spaceship3.pos.y >= oxygen3.pos.y - 30) {
     oxygen3.CorrectAnswer();
-  } else if (mouseX <= wronganswer3OX1[o3] + 100 && mouseX >= wronganswer3OX1[o3] - 10 && mouseY <= wronganswer3OY1[o3] + 10 && mouseY >= wronganswer3OY1[o3] - 10 && spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) {
+  } else if (mouseX <= wronganswer3OX1[o3] + 100 && mouseX >= wronganswer3OX1[o3] - 10 && mouseY <= wronganswer3OY1[o3] + 10 && mouseY >= wronganswer3OY1[o3] - 10 && spaceship3.pos.x <= oxygen3.pos.x + 30 && spaceship3.pos.x >= oxygen3.pos.x - 30 && spaceship3.pos.y <= oxygen3.pos.y + 30 && spaceship3.pos.y >= oxygen3.pos.y - 30) {
 //     Display different question if answered incorrectly
     oxygen3.WrongAnswer();
-  } else if (mouseX <= wronganswer3OX2[o3] + 100 && mouseX >= wronganswer3OX2[o3] - 10 && mouseY <= wronganswer3OY2[o3] + 10 && mouseY >= wronganswer3OY2[o3] - 10 && spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) {
+  } else if (mouseX <= wronganswer3OX2[o3] + 100 && mouseX >= wronganswer3OX2[o3] - 10 && mouseY <= wronganswer3OY2[o3] + 10 && mouseY >= wronganswer3OY2[o3] - 10 && spaceship3.pos.x <= oxygen3.pos.x + 30 && spaceship3.pos.x >= oxygen3.pos.x - 30 && spaceship3.pos.y <= oxygen3.pos.y + 30 && spaceship3.pos.y >= oxygen3.pos.y - 30) {
 //     Display different question if answered incorrectly
     oxygen3.WrongAnswer();
-  } else if (mouseX <= wronganswer3OX3[o3] + 100 && mouseX >= wronganswer3OX3[o3] - 10 && mouseY <= wronganswer3OY3[o3] + 10 && mouseY >= wronganswer3OY3[o3] - 10 && spaceship3.pos.x <= oxygen3.pos.x + 22.5 && spaceship3.pos.x >= oxygen3.pos.x - 22.5 && spaceship3.pos.y <= oxygen3.pos.y + 22.5 && spaceship3.pos.y >= oxygen3.pos.y - 22.5) {
+  } else if (mouseX <= wronganswer3OX3[o3] + 100 && mouseX >= wronganswer3OX3[o3] - 10 && mouseY <= wronganswer3OY3[o3] + 10 && mouseY >= wronganswer3OY3[o3] - 10 && spaceship3.pos.x <= oxygen3.pos.x + 30 && spaceship3.pos.x >= oxygen3.pos.x - 30 && spaceship3.pos.y <= oxygen3.pos.y + 30 && spaceship3.pos.y >= oxygen3.pos.y - 30) {
 //     Display different question if answered incorrectly
     oxygen3.WrongAnswer();
   }
