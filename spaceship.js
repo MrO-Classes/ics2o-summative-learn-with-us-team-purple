@@ -24,12 +24,12 @@ var Spaceship = function(x, y) {
     //     Constrain spaceship inside the canvas
     if (this.pos.y < 0) {
       this.pos = createVector(this.pos.x, 0);
-    } else if (this.pos.y > 600) {
-      this.pos = createVector(this.pos.x, 600);
+    } else if (this.pos.y > 550) {
+      this.pos = createVector(this.pos.x, 550);
     } else if (this.pos.x < 0) {
       this.pos = createVector(0, this.pos.y)
-    } else if (this.pos.x > 600) {
-      this.pos = createVector(600, this.pos.y);
+    } else if (this.pos.x > 550) {
+      this.pos = createVector(550, this.pos.y);
     }
 
   }
