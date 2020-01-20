@@ -78,6 +78,7 @@ SPACESHIP.pos.y >= OXYGEN.pos.y - 30) {
 
   //   Check if SPACESHIP is on rectangle (win the level)
   if (SPACESHIP.pos.x <= 600 && SPACESHIP.pos.x >= 500 && SPACESHIP.pos.y <= 600 && SPACESHIP.pos.y >= 500) {
+    SPACESHIP.score+=50;
     sceneNum = 7;
   }
 
