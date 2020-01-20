@@ -74,6 +74,7 @@ Asteroid6.pos.y <= spaceship3.pos.y + 75 && Asteroid6.pos.y >= spaceship3.pos.y)
   
       //   Check if spaceship3 is on earth (win the level)
   if (spaceship3.pos.x <= 600 && spaceship3.pos.x >= 500 && spaceship3.pos.y <= 600 && spaceship3.pos.y >= 500) {
+    spaceship3.score +=50;
     sceneNum = 13;
   }
 
