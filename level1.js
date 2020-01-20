@@ -68,10 +68,10 @@ asteroid3.pos.y <= spaceship.pos.y + 75 && asteroid3.pos.y >= spaceship.pos.y) {
 
   //   Check if SPACESHIP is on rectangle (win the level)
   if (spaceship.pos.x <= 600 && spaceship.pos.x >= 500 && spaceship.pos.y <= 600 && spaceship.pos.y >= 500) {
+    spaceship.score +=50;
     sceneNum = 10;
   }
 
 
 }
-
 
