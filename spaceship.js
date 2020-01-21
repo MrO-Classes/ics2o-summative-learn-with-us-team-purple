@@ -70,7 +70,6 @@ var Spaceship = function(x, y) {
     fill(255, 255, 255);
     textSize(30);
     text("Level Complete!", 200, 200);
-    this.score += 50;
 //     Reset all variables to 0
     O = 0;
     W = 0;
