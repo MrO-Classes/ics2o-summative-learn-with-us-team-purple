@@ -26,3 +26,4 @@ var MainMenu = function() {
   text("Score: " + spaceship3.score, 100, 400);
   text("Total Score: ", 100, 450);
 }
+
