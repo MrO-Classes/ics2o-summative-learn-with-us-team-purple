@@ -1,8 +1,8 @@
 var Level1 = function() {
   //   Check if asteroids are touching spaceship, and fail level if they are, but if spacehsip is touching oxygen or water, then don't fail level
-  if (!(spaceship.pos.x <= oxygen.pos.x + 30 && spaceship.pos.x >= spaceship.pos.x - 30 && spaceship.pos.y <= spaceship.pos.y + 30 && spaceship.pos.y >= spaceship.pos.y - 30) && !(spaceship.pos.x <= water.pos.x + 20 && 
-water.pos.x >= water.pos.x - 20 && 
-water.pos.y <= water.pos.y + 20 && 
+  if (!(spaceship.pos.x <= oxygen.pos.x + 30 && spaceship.pos.x >= oxygen.pos.x - 30 && spaceship.pos.y <= oxygen.pos.y + 30 && spaceship.pos.y >= oxygen.pos.y - 30) && !(spaceship.pos.x <= water.pos.x + 20 && 
+spaceship.pos.x >= water.pos.x - 20 && 
+spaceship.pos.y <= water.pos.y + 20 && 
 spaceship.pos.y >= water.pos.y - 20) && 
 asteroid1.pos.x <= spaceship.pos.x + 90 && asteroid1.pos.x >= spaceship.pos.x && 
 asteroid1.pos.y <= spaceship.pos.y + 75 && asteroid1.pos.y >= spaceship.pos.y) {
