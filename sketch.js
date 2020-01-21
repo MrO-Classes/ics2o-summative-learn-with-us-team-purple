@@ -56,7 +56,7 @@ var ANSWERSO2 = ["$57",     "$2 ¢10",  "$5 ¢25", "$17 ¢50","$10", ""];
 
 var ANSWERSO3 = ["$5 ¢7",   "$7 ¢90",  "$4 ¢75", "$7 ¢60", "$3", ""];
 
-var ANSWERSO4 = ["$5 ¢175", "$3 ¢10",  "62",     "$7 ¢40", "$6 ¢70", ""];
+var ANSWERSO4 = ["$5 ¢175", "$3 ¢10",  "$15 ¢25", "$7 ¢40", "$6 ¢70", ""];
 
 var CHECKANSWEROX = [70,  70,  70,  70,  70];
 var CHECKANSWEROY = [250, 300, 350, 400, 250];
@@ -132,9 +132,9 @@ var wronganswerOY3 = [400, 400, 350, 400];
 var o = 0;
 
 // water questions (level 1)
-var questionsW1 = ["True or false:", "Which of these collections is equal to $10?", "Matthew wants to buy a cookie and drink. Cookies are ¢50, and drinks are $1 ¢50", "Maryam is going to David's party and needs a gift. The gift costs $5 ¢75, but she only has $4 ¢90", "Correct! You may proceed"];
+var questionsW1 = ["True or false:", "Which of these collections is equal to $10?", "Matthew buys a cookie for ¢50 and a drink for $1 ¢50", "Maryam buys a gift for David that costs $5 ¢75, but she", "Correct! You may proceed"];
 
-var questionsW2 = ["¢10 = $0.10", "", "If he wants to pay with only 1 bill/coin, which should he use?", "How much more money does she need?", ""];
+var questionsW2 = ["¢10 = $0.10", "", "If he wants to pay with only 1 bill/coin, which should he use?", "only has $4 ¢90. How much more money does she need?", ""];
 
 var answersW1 = ["True",  "$1 ¢50 + $1 ¢50 + $1 ¢50",     "$5",    "$5 ¢75", ""];
 
@@ -166,29 +166,29 @@ var w = 0;
 
 var o3 = 0;
 
-var questions3O1 = ["Rachael eats with 3 friends, and food costs $9 ¢50", "Maryam has $10, and gives $5 to David. David gives $2 ¢80 to Rachael.", "Which of the following is true?", "If a bottle of water and chocolate bar together cost $5, and", "Maryam bought colouring pencils for $2 ¢50 and french fries for $5.", "Which of the following are enough to buy a chocolate bar that costs $2 ¢65", "Correct! You may proceed!"];
+var questions3O1 = ["Rachael eats with 3 friends, and food costs $9 ¢50", "Maryam has $10, and gives $5 to David. He gives Rachael", "Which of the following is true?", "A bottle of water and chocolate bar together cost $5. If", "Maryam bought pencils for $2 ¢50 and french fries for $5.", "Which of the following are enough to buy a chocolate bar", "Correct! You may proceed!"];
 
-var questions3O2 = ["If EACH friend pays $3, how much does Rachael pay?", "How much money does David now have left?", "", "the chocolate bar costs $1 ¢75, how much does the water cost?", "If she paid $10 IN TOTAL, how much change should she get back?", "", ""];
+var questions3O2 = ["If EACH friend pays $3, how much does Rachael pay?", "$2 ¢80. How much money does David now have left?", "", "the chocolate bar is $1 ¢75, how much does the water cost?", "She paid $10 IN TOTAL. How much change should she get?", "that costs $2 ¢65?", ""];
 
 var answers3O1 = ["$3",    "$10", "a toonie = ¢2",            "$3 ¢25", "$5", "$1 + ¢50 + ¢5 + $1", "" ];
 
-var answers3O2 = ["$3 ¢50", "$5", "¢10 + ¢10 + ¢50 = ¢25",    "$5",     "$7 ¢50", "$1 + $1 + ¢25 + ¢10 + ¢5 + ¢25", "" ];
+var answers3O2 = ["¢50", "$5", "¢10 + ¢10 + ¢50 = ¢25",    "$5",     "$7 ¢50", "$1 + $1 + ¢25 + ¢10 + ¢5 + ¢25", "" ];
 
-var answers3O3 = ["$9 ¢50", "$2 ¢20", "a loonie = ¢1",     "$1 ¢75", "$10",  "$2", "" ];
+var answers3O3 = ["$9 ¢50", "$2 ¢20", "a loonie = ¢1",     "$1 ¢75", "$10", "$2", "" ];
 
 var answers3O4 = ["$0",     "$2 ¢80", "$10 - $3 ¢80 = $6 ¢20", "$6 ¢75", "$2 ¢50", "", ""];
 
-var checkanswer3OX = [70,   70,  70,  70,  70];
-var checkanswer3OY = [300, 350, 250, 400, 300];
+var checkanswer3OX = [70,   70,  70,  70,  70, 70];
+var checkanswer3OY = [300, 350, 400, 250, 400, 300];
 
-var wronganswer3OX1 = [70,   70,  70,  70,  70];
-var wronganswer3OY1 = [250, 250, 300, 250, 250];
+var wronganswer3OX1 = [70,   70,  70,  70,  70, 70];
+var wronganswer3OY1 = [250, 250, 250, 300, 250, 250];
 
-var wronganswer3OX2 = [70,   70,  70,  70,  70];
-var wronganswer3OY2 = [350, 300, 350, 300, 350];
+var wronganswer3OX2 = [70,   70,  70,  70,  70, 70];
+var wronganswer3OY2 = [350, 300, 300, 350, 300, 350];
 
-var wronganswer3OX3 = [70,   70,  70,  70,  70];
-var wronganswer3OY3 = [400, 400, 400, 350, 400];
+var wronganswer3OX3 = [70,   70,  70,  70,  70, 70];
+var wronganswer3OY3 = [400, 400, 350, 400, 350, 400];
 
 // water3
 
