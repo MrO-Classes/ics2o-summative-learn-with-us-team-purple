@@ -3,6 +3,7 @@ var Scene1 = function() {
 
   background(0, 0, 0);
 
+//   Star images
   image(img1, 100, 100, 40, 40);
   image(img1, 75, 300, 40, 40);
   image(img1, 200, 500, 40, 40);
@@ -35,4 +36,3 @@ var Scene1 = function() {
 
 
 }
-
