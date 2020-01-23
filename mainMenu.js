@@ -26,5 +26,4 @@ var MainMenu = function() {
   text("Level 3", 100, 350);
   fill(255, 255, 255);
   text("Score: " + spaceship3.score, 100, 400);
-  text("Total Score: ", 100, 450);
 }
