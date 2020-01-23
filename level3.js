@@ -79,3 +79,4 @@ Asteroid6.pos.y <= spaceship3.pos.y + 75 && Asteroid6.pos.y >= spaceship3.pos.y)
   }
 
 }
+
