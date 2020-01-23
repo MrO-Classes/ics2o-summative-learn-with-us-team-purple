@@ -75,3 +75,5 @@ asteroid3.pos.y <= spaceship.pos.y + 75 && asteroid3.pos.y >= spaceship.pos.y) {
 
 }
 
+
+
