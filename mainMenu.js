@@ -27,3 +27,5 @@ var MainMenu = function() {
   fill(255, 255, 255);
   text("Score: " + spaceship3.score, 100, 400);
 }
+
+
