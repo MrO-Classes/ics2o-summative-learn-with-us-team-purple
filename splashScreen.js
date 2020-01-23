@@ -5,6 +5,7 @@ var SplashScreen = function() {
   var imgH = 100;
 
   this.display = function() {
+//     Star images
     image(img1, 100, 100, 40, 40);
     image(img1, 75, 300, 40, 40);
     image(img1, 200, 500, 40, 40);
