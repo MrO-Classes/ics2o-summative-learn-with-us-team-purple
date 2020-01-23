@@ -72,7 +72,7 @@ var WRONGANSWEROX3 = [70,   70,  70,  70,  70];
 var WRONGANSWEROY3 = [400, 400, 400, 350, 400];
 
 // Questions and answers for WATER (Level 2)
-var QUESTIONSW1 = ["Are these coin collections equal?", "True or false:", "Which coin should be added to make the statement true?", "True or false:", "Correct! You may proceed."];
+var QUESTIONSW1 = ["Are these coin collections equal?", "True or false:", "Which coin should be added to make the statement true?", "True or false:", "Correct! You may proceed!"];
 
 var QUESTIONSW2 = ["$2 + $3 + ¢50 + ¢5 and $2 + ¢50 + $3 + $5", "$10 - $6 - $2 ¢50 + $1 ¢50 = $3", "$3 ¢25 + ¢50 + _ = $4", "$7 can be represented with 1 bill/coin.", ""];
 
@@ -132,7 +132,7 @@ var wronganswerOY3 = [400, 400, 350, 400];
 var o = 0;
 
 // water questions (level 1)
-var questionsW1 = ["True or false:", "Which of these collections is equal to $10?", "Matthew buys a cookie for ¢50 and a drink for $1 ¢50", "Maryam buys a gift for David that costs $5 ¢75, but she", "Correct! You may proceed"];
+var questionsW1 = ["True or false:", "Which of these collections is equal to $10?", "Matthew buys a cookie for ¢50 and a drink for $1 ¢50", "Maryam buys a gift for David that costs $5 ¢75, but she", "Correct! You may proceed!"];
 
 var questionsW2 = ["¢10 = $0.10", "", "If he wants to pay with only 1 bill/coin, which should he use?", "only has $4 ¢90. How much more money does she need?", ""];
 
@@ -563,6 +563,5 @@ SPACESHIP.pos.y >= OXYGEN.pos.y - 30) {
   
 
 }
-
 
 
