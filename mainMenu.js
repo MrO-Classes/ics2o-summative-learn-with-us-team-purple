@@ -1,5 +1,7 @@
 var MainMenu = function() {
   background(0, 0, 0);
+  
+//   Star images
   image(img1, 100, 100, 40, 40);
   image(img1, 75, 300, 40, 40);
   image(img1, 200, 500, 40, 40);
@@ -26,4 +28,3 @@ var MainMenu = function() {
   text("Score: " + spaceship3.score, 100, 400);
   text("Total Score: ", 100, 450);
 }
-
